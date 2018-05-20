@@ -15,4 +15,7 @@
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
     <string name="new_button_with_text">New button with text</string>
+    <string name="hello_world">Hello, World!</string>
+    <string name="easy_android">Android it\'s easy!</string>
+    <string name="my_button">My button</string>
 </resources>
