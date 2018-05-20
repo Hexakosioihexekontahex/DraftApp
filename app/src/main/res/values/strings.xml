@@ -11,4 +11,7 @@
     <string name="button2">Button2</string>
     <string name="button3">Button3</string>
     <string name="button4">Button4</string>
+    <string name="type_here">Type here</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
 </resources>

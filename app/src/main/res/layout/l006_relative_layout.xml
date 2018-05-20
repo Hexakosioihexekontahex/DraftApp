@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/type_here"/>
+
+    <EditText
+        android:id="@+id/entry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_toEndOf="@+id/textView"
+        android:ems="10"
+        android:hint="@string/type_here"
+        android:inputType="textPersonName"
+        android:layout_toRightOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/cancelbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/entry"
+        android:layout_toEndOf="@+id/textView"
+        android:text="@string/cancel"
+        android:layout_toRightOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/okbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/entry"
+        android:layout_below="@+id/entry"
+        android:text="@string/ok"
+        android:layout_alignRight="@+id/entry" />
+</RelativeLayout>
