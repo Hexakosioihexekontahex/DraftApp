@@ -1,6 +1,16 @@
+*.iml
 *.class
+.gradle
+/local.properties
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+
+\.idea/
 
 # Mobile Tools for Java (J2ME)
+-
 .mtj.tmp/
 
 # Package Files #
