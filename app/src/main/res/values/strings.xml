@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">DraftApp</string>
+    <string name="button">Button</string>
+    <string name="name">Name</string>
+    <string name="named">Named</string>
+    <string name="checkbox">CheckBox</string>
 </resources>

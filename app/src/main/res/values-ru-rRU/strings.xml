@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DraftApp</string>
+    <string name="button">Кнопка</string>
+    <string name="name">Имя</string>
+    <string name="named">Названо</string>
+    <string name="checkbox">Флажок</string>
+</resources>
