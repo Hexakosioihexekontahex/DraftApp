@@ -14,4 +14,5 @@
     <string name="type_here">Type here</string>
     <string name="ok">OK</string>
     <string name="cancel">Cancel</string>
+    <string name="new_button_with_text">New button with text</string>
 </resources>
