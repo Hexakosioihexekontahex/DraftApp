@@ -5,4 +5,11 @@
     <string name="name">Имя</string>
     <string name="named">Названо</string>
     <string name="checkbox">Флажок</string>
+    <string name="not_main_xml">Этот экран описан не в main.xml, а в myscreen.xml</string>
+    <string name="horizontal">Горизонтально</string>
+    <string name="vertical">Вертикально</string>
+    <string name="button1">Кнопка1</string>
+    <string name="button2">Кнопка2</string>
+    <string name="button3">Кнопка3</string>
+    <string name="button4">Кнопка4</string>
 </resources>

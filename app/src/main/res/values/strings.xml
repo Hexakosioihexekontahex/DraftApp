@@ -4,4 +4,11 @@
     <string name="name">Name</string>
     <string name="named">Named</string>
     <string name="checkbox">CheckBox</string>
+    <string name="not_main_xml">This screen is described not in main.xml, but in myscreen.xml</string>
+    <string name="horizontal">Horizontal</string>
+    <string name="vertical">Vertical</string>
+    <string name="button1">Button1</string>
+    <string name="button2">Button2</string>
+    <string name="button3">Button3</string>
+    <string name="button4">Button4</string>
 </resources>
