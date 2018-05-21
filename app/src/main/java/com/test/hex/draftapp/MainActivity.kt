@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        useLayout(R.layout.l010_click_buttons)
+        useLayout(R.layout.l011_resources)
     }
 
     private fun useLayout(layout: Int){
