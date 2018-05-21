@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.Gravity
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.*
 
@@ -21,6 +23,43 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         useLayout(R.layout.l010_click_buttons)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        val id = item?.itemId
+
+        when (id) {
+            R.id.action_settings -> {
+                Toast.makeText(this,
+                        getString(R.string.action_settings),
+                        Toast.LENGTH_SHORT)
+                        .show()
+            }
+            R.id.action_item1 -> {
+                Toast.makeText(this,
+                        getString(R.string.action_item1),
+                        Toast.LENGTH_SHORT)
+                        .show()
+            }
+            R.id.action_item2 -> {
+                Toast.makeText(this,
+                        getString(R.string.action_item2),
+                        Toast.LENGTH_SHORT)
+                        .show()
+            }
+            R.id.action_item3 -> {
+                Toast.makeText(this,
+                        getString(R.string.action_item3),
+                        Toast.LENGTH_SHORT)
+                        .show()
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     private fun useLayout(layout: Int){

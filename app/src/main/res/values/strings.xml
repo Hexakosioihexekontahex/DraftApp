@@ -23,4 +23,8 @@
     <string name="text3">Нажата кнопка 3</string>
     <string name="click_any_button">Нажми любую кнопку</string>
     <string name="button_number_three">Кнопка номер 3</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_item1">Item1</string>
+    <string name="action_item2">Item2</string>
+    <string name="action_item3">Item3</string>
 </resources>
