@@ -7,7 +7,7 @@ import android.widget.Button
 import android.widget.CheckBox
 import android.widget.TextView
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class MainActivity : AppCompatActivity() {
 
     lateinit var textView: TextView
     lateinit var button: Button
@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        useLayout(R.layout.l009_click_button)
+        useLayout(R.layout.l010_click_buttons)
     }
 
     private fun useLayout(layout: Int){
@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 setContentView(layout)
 
                 textView = findViewById(R.id.textView)
-                textView.text = getString(R.string.something)
+                textView.text = getString(R.string.click_any_button)
                 button1 = findViewById(R.id.button1)
                 button2 = findViewById(R.id.button2)
                 button3 = findViewById(R.id.button3)
@@ -49,18 +49,34 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                     textView.text = "Нажата кнопка ${button1.text}"
                 }
 
-                button2.setOnClickListener(this)
+//                button2.setOnClickListener(this)
+            }
+            R.layout.l010_click_buttons -> {
+                setContentView(layout)
+
+                textView = findViewById(R.id.textView)
+                textView.text = getString(R.string.click_any_button)
+
+                button1 = findViewById(R.id.button1)
+                button2 = findViewById(R.id.button2)
+                button3 = findViewById(R.id.button3)
+
+                button1.setOnClickListener {
+                    textView.text = getString(R.string.text1)
+                }
+                button2.setOnClickListener {
+                    textView.text = getString(R.string.text2)
+                }
+                button3.setOnClickListener {
+                    textView.text = getString(R.string.text3)
+                }
+                textView.setOnClickListener {
+                    textView.text = getString(R.string.click_any_button)
+                    button3.text = getString(R.string.button_number_three)
+                }
             }
 
             else -> setContentView(layout)
         }
-    }
-
-    override fun onClick(v: View?) {
-        textView.text = "Нажата кнопка ${button2.text}"
-    }
-
-    fun onClickButton3(view: View) {
-        textView.text = "Нажата кнопка ${button3.text}"
     }
 }

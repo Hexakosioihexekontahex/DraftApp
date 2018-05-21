@@ -18,5 +18,9 @@
     <string name="hello_world">Hello, World!</string>
     <string name="easy_android">Android it\'s easy!</string>
     <string name="my_button">My button</string>
-    <string name="something">Something</string>
+    <string name="text1">Нажата кнопка 1</string>
+    <string name="text2">Нажата кнопка 2</string>
+    <string name="text3">Нажата кнопка 3</string>
+    <string name="click_any_button">Нажми любую кнопку</string>
+    <string name="button_number_three">Кнопка номер 3</string>
 </resources>
