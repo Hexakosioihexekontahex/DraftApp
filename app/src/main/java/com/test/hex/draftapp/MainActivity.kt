@@ -32,7 +32,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        useLayout(R.layout.l015_context_menu)
+        /*useLayout(R.layout.l015_context_menu)*/
+        createL016(this)
     }
 /*
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -202,27 +203,27 @@ class MainActivity : AppCompatActivity() {
         when (item?.itemId) {
             MENU_COLOUR_RED -> {
                 textView1.setTextColor(Color.RED)
-                textView1.setText("Text colour = red")
+                textView1.text = "Text colour = red"
             }
             MENU_COLOUR_GREEN -> {
                 textView1.setTextColor(Color.GREEN)
-                textView1.setText("Text colour = green")
+                textView1.text = "Text colour = green"
             }
             MENU_COLOUR_BLUE -> {
                 textView1.setTextColor(Color.BLUE)
-                textView1.setText("Text colour = blue")
+                textView1.text = "Text colour = blue"
             }
             MENU_SIZE_22 -> {
-                textView2.setTextSize(22F)
-                textView2.setText("Text size = 22")
+                textView2.textSize = 22F
+                textView2.text = "Text size = 22"
             }
             MENU_SIZE_26 -> {
-                textView2.setTextSize(26F)
-                textView2.setText("Text size = 26")
+                textView2.textSize = 26F
+                textView2.text = "Text size = 26"
             }
             MENU_SIZE_30 -> {
-                textView2.setTextSize(30F)
-                textView2.setText("Text size = 30")
+                textView2.textSize = 30F
+                textView2.text = "Text size = 30"
             }
         }
 
@@ -241,4 +242,42 @@ class MainActivity : AppCompatActivity() {
 private fun Toast.centerGravitation(): Toast {
     this.setGravity(Gravity.CENTER, 0, 0)
     return this
+}
+
+private fun createL016(activity: AppCompatActivity){
+    val linearLayout = LinearLayout(activity)
+    linearLayout.orientation = LinearLayout.VERTICAL
+    val linLayoutParams = ViewGroup.LayoutParams(
+            ViewGroup.LayoutParams.MATCH_PARENT,
+            ViewGroup.LayoutParams.MATCH_PARENT)
+    activity.setContentView(linearLayout, linLayoutParams)
+
+    val lpView = ViewGroup.LayoutParams(
+            ViewGroup.LayoutParams.WRAP_CONTENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT
+    )
+
+    val textView = TextView(activity)
+    textView.text = activity.getString(R.string.text)
+    textView.layoutParams = lpView
+    linearLayout.addView(textView)
+
+    val leftMarginParams = LinearLayout.LayoutParams(
+            ViewGroup.LayoutParams.WRAP_CONTENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT)
+    leftMarginParams.leftMargin = 50
+
+    val button = Button(activity)
+    button.text = activity.getString(R.string.button)
+    linearLayout.addView(button, leftMarginParams)
+
+    val gravityParams = LinearLayout.LayoutParams(
+            ViewGroup.LayoutParams.WRAP_CONTENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT
+    )
+    gravityParams.gravity = Gravity.CENTER
+
+    val button1 = Button(activity)
+    button1.text = activity.getString(R.string.button1)
+    linearLayout.addView(button1, gravityParams)
 }
