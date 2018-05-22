@@ -32,4 +32,6 @@
     <string name="hide_menu_element">Hide menu element</string>
     <string name="show_group">Show menu group</string>
     <string name="show_menu_element">Show menu element</string>
+    <string name="text_colour">Text colour</string>
+    <string name="text_size">Text size</string>
 </resources>

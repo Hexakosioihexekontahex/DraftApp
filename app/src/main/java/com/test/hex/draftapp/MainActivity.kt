@@ -1,15 +1,21 @@
 package com.test.hex.draftapp
 
+import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.Gravity
-import android.view.Menu
-import android.view.MenuItem
-import android.view.View
+import android.view.*
 import android.widget.*
 
 private const val TAG = "myLogs"
+
+private const val MENU_COLOUR_RED = 1
+private const val MENU_COLOUR_GREEN = 2
+private const val MENU_COLOUR_BLUE = 3
+
+private const val MENU_SIZE_22 = 4
+private const val MENU_SIZE_26 = 5
+private const val MENU_SIZE_30 = 6
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,12 +27,14 @@ class MainActivity : AppCompatActivity() {
     lateinit var checkBox: CheckBox
     lateinit var checkBox1: CheckBox
     lateinit var checkBox2: CheckBox
+    lateinit var textView1: TextView
+    lateinit var textView2: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        useLayout(R.layout.l014_menu)
+        useLayout(R.layout.l015_context_menu)
     }
-
+/*
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
         checkBox2.setOnCheckedChangeListener { _, _ ->
@@ -34,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         menu?.add(2, 4, 4, "item4")?.isCheckable = true
         return true
     }
-
+*//*
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         val id = item?.itemId
 
@@ -69,7 +77,7 @@ class MainActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
-
+*/
     private fun useLayout(layout: Int){
         when (layout) {
             R.layout.l008_view_by_id -> {
@@ -160,18 +168,74 @@ class MainActivity : AppCompatActivity() {
                 checkBox2 = findViewById(R.id.checkBox2)
 
             }
+            R.layout.l015_context_menu -> {
+                setContentView(layout)
+                textView1 = findViewById(R.id.textView1)
+                textView2 = findViewById(R.id.textView2)
+
+                registerForContextMenu(textView1)
+                registerForContextMenu(textView2)
+            }
 
             else -> setContentView(layout)
         }
     }
 
+    override fun onCreateContextMenu(menu: ContextMenu?,
+                                     v: View?,
+                                     menuInfo: ContextMenu.ContextMenuInfo?) {
+        when (v?.id) {
+            R.id.textView1 -> {
+                menu?.add(0, MENU_COLOUR_RED, 0, "Red")
+                menu?.add(0, MENU_COLOUR_GREEN, 0, "Green")
+                menu?.add(0, MENU_COLOUR_BLUE, 0, "Blue")
+            }
+            R.id.textView2 -> {
+                menu?.add(0, MENU_SIZE_22, 0, "22")
+                menu?.add(0, MENU_SIZE_26, 0, "26")
+                menu?.add(0, MENU_SIZE_30, 0, "30")
+            }
+        }
+    }
+
+    override fun onContextItemSelected(item: MenuItem?): Boolean {
+        when (item?.itemId) {
+            MENU_COLOUR_RED -> {
+                textView1.setTextColor(Color.RED)
+                textView1.setText("Text colour = red")
+            }
+            MENU_COLOUR_GREEN -> {
+                textView1.setTextColor(Color.GREEN)
+                textView1.setText("Text colour = green")
+            }
+            MENU_COLOUR_BLUE -> {
+                textView1.setTextColor(Color.BLUE)
+                textView1.setText("Text colour = blue")
+            }
+            MENU_SIZE_22 -> {
+                textView2.setTextSize(22F)
+                textView2.setText("Text size = 22")
+            }
+            MENU_SIZE_26 -> {
+                textView2.setTextSize(26F)
+                textView2.setText("Text size = 26")
+            }
+            MENU_SIZE_30 -> {
+                textView2.setTextSize(30F)
+                textView2.setText("Text size = 30")
+            }
+        }
+
+        return super.onContextItemSelected(item)
+    }
+/*
     override fun onPrepareOptionsMenu(menu: Menu?): Boolean {
         menu?.findItem(R.id.action_mail)?.isVisible = checkBox2.isChecked
 
         menu?.setGroupVisible(R.id.group1, checkBox1.isChecked)
 
         return super.onPrepareOptionsMenu(menu)
-    }
+    }*/
 }
 
 private fun Toast.centerGravitation(): Toast {
