@@ -27,4 +27,9 @@
     <string name="action_item1">Item1</string>
     <string name="action_item2">Item2</string>
     <string name="action_item3">Item3</string>
+    <string name="mail">Mail</string>
+    <string name="hide_group">Hide group</string>
+    <string name="hide_menu_element">Hide menu element</string>
+    <string name="show_group">Show menu group</string>
+    <string name="show_menu_element">Show menu element</string>
 </resources>

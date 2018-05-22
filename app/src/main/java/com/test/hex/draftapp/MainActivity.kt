@@ -19,14 +19,19 @@ class MainActivity : AppCompatActivity() {
     lateinit var button2: Button
     lateinit var button3: Button
     lateinit var checkBox: CheckBox
+    lateinit var checkBox1: CheckBox
+    lateinit var checkBox2: CheckBox
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        useLayout(R.layout.l010_click_buttons)
+        useLayout(R.layout.l014_menu)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
+        checkBox2.setOnCheckedChangeListener { _, _ ->
+            invalidateOptionsMenu() }
+        menu?.add(2, 4, 4, "item4")?.isCheckable = true
         return true
     }
 
@@ -57,6 +62,9 @@ class MainActivity : AppCompatActivity() {
                         getString(R.string.action_item3),
                         Toast.LENGTH_SHORT)
                         .show()
+            }
+            4 -> {
+                item.isChecked = !item.isChecked
             }
         }
         return super.onOptionsItemSelected(item)
@@ -145,9 +153,24 @@ class MainActivity : AppCompatActivity() {
                     toast.show()
                 }
             }
+            R.layout.l014_menu -> {
+                setContentView(layout)
+
+                checkBox1 = findViewById(R.id.checkBox1)
+                checkBox2 = findViewById(R.id.checkBox2)
+
+            }
 
             else -> setContentView(layout)
         }
+    }
+
+    override fun onPrepareOptionsMenu(menu: Menu?): Boolean {
+        menu?.findItem(R.id.action_mail)?.isVisible = checkBox2.isChecked
+
+        menu?.setGroupVisible(R.id.group1, checkBox1.isChecked)
+
+        return super.onPrepareOptionsMenu(menu)
     }
 }
 
