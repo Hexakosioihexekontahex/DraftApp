@@ -35,4 +35,9 @@
     <string name="text_colour">Text colour</string>
     <string name="text_size">Text size</string>
     <string name="text">Text</string>
+    <string name="left">Left</string>
+    <string name="center">Center</string>
+    <string name="right">Right</string>
+    <string name="create">Create</string>
+    <string name="clear">Clear</string>
 </resources>

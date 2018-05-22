@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.*
 import android.widget.*
-
+/*
 private const val TAG = "myLogs"
 
 private const val MENU_COLOUR_RED = 1
@@ -16,9 +16,9 @@ private const val MENU_COLOUR_BLUE = 3
 private const val MENU_SIZE_22 = 4
 private const val MENU_SIZE_26 = 5
 private const val MENU_SIZE_30 = 6
-
-class MainActivity : AppCompatActivity() {
-
+*/
+class MainActivity : AppCompatActivity(), View.OnClickListener {
+/*
     lateinit var textView: TextView
     lateinit var button: Button
     lateinit var button1: Button
@@ -29,11 +29,28 @@ class MainActivity : AppCompatActivity() {
     lateinit var checkBox2: CheckBox
     lateinit var textView1: TextView
     lateinit var textView2: TextView
+*/
+    lateinit var llMain: LinearLayout
+    lateinit var rgGravity: RadioGroup
+    lateinit var etName: EditText
+    lateinit var btnCreate: Button
+    lateinit var btnClear: Button
+    var i_id = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         /*useLayout(R.layout.l015_context_menu)*/
-        createL016(this)
+        //createL016(this)
+
+        setContentView(R.layout.l017_create_delete_dynamic_elements)
+        llMain = findViewById(R.id.llMain)
+        rgGravity = findViewById(R.id.grGravity)
+        etName = findViewById(R.id.etName)
+        btnCreate = findViewById(R.id.btnCreate)
+        btnClear = findViewById(R.id.btnClear)
+
+        btnCreate.setOnClickListener(this)
+        btnClear.setOnClickListener(this)
     }
 /*
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -43,7 +60,8 @@ class MainActivity : AppCompatActivity() {
         menu?.add(2, 4, 4, "item4")?.isCheckable = true
         return true
     }
-*//*
+*/
+/*
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         val id = item?.itemId
 
@@ -79,6 +97,7 @@ class MainActivity : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 */
+/*
     private fun useLayout(layout: Int){
         when (layout) {
             R.layout.l008_view_by_id -> {
@@ -181,7 +200,8 @@ class MainActivity : AppCompatActivity() {
             else -> setContentView(layout)
         }
     }
-
+*/
+/*
     override fun onCreateContextMenu(menu: ContextMenu?,
                                      v: View?,
                                      menuInfo: ContextMenu.ContextMenuInfo?) {
@@ -198,7 +218,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-
+*/
+/*
     override fun onContextItemSelected(item: MenuItem?): Boolean {
         when (item?.itemId) {
             MENU_COLOUR_RED -> {
@@ -229,6 +250,7 @@ class MainActivity : AppCompatActivity() {
 
         return super.onContextItemSelected(item)
     }
+*/
 /*
     override fun onPrepareOptionsMenu(menu: Menu?): Boolean {
         menu?.findItem(R.id.action_mail)?.isVisible = checkBox2.isChecked
@@ -236,14 +258,64 @@ class MainActivity : AppCompatActivity() {
         menu?.setGroupVisible(R.id.group1, checkBox1.isChecked)
 
         return super.onPrepareOptionsMenu(menu)
-    }*/
-}
+    }
+    */
 
+    override fun onClick(v: View?) {
+        when (v?.id) {
+            R.id.btnCreate -> {
+                val lParams = LinearLayout.LayoutParams(
+                        ViewGroup.LayoutParams.WRAP_CONTENT,
+                        ViewGroup.LayoutParams.WRAP_CONTENT
+                )
+                var btnGravity = Gravity.START
+
+                when (rgGravity.checkedRadioButtonId) {
+                    R.id.rbLeft -> {
+                        btnGravity = Gravity.START
+                    }
+                    R.id.rbCenter -> {
+                        btnGravity = Gravity.CENTER
+                    }
+                    R.id.rbRight -> {
+                        btnGravity = Gravity.END
+                    }
+                }
+
+                lParams.gravity = btnGravity
+                val btnNew = Button(this)
+                btnNew.text = etName.text.toString()
+                btnNew.id = ++i_id
+                llMain.addView(btnNew, lParams)
+                btnNew.setAllCaps(false)
+                btnNew.setOnClickListener(this)
+            }
+            R.id.btnClear -> {
+                llMain.removeAllViews()
+                i_id = 0
+                Toast.makeText(this, "Deleted", Toast.LENGTH_SHORT).show()
+            }
+            else -> {
+                if (v?.id != null) {
+                    Toast.makeText(this,
+                            "You pressed on ${v.id} button",
+                            Toast.LENGTH_SHORT)
+                            .show()
+                    findViewById<Button>(v.id).setBackgroundColor(Color.BLACK)
+                    findViewById<Button>(v.id).setTextColor(Color.WHITE)
+                }
+            }
+        }
+    }
+
+}
+/*
 private fun Toast.centerGravitation(): Toast {
     this.setGravity(Gravity.CENTER, 0, 0)
     return this
 }
-
+*/
+/*
 private fun createL016(activity: AppCompatActivity){
     val linearLayout = LinearLayout(activity)
     linearLayout.orientation = LinearLayout.VERTICAL
@@ -281,3 +353,4 @@ private fun createL016(activity: AppCompatActivity){
     button1.text = activity.getString(R.string.button1)
     linearLayout.addView(button1, gravityParams)
 }
+*/
