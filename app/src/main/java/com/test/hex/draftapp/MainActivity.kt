@@ -1,10 +1,7 @@
 package com.test.hex.draftapp
 
-import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.*
 import android.widget.*
 /*
 private const val TAG = "myLogs"
@@ -17,7 +14,9 @@ private const val MENU_SIZE_22 = 4
 private const val MENU_SIZE_26 = 5
 private const val MENU_SIZE_30 = 6
 */
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class MainActivity : AppCompatActivity()/*, View.OnClickListener*/
+        , SeekBar.OnSeekBarChangeListener {
+
 /*
     lateinit var textView: TextView
     lateinit var button: Button
@@ -30,18 +29,26 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     lateinit var textView1: TextView
     lateinit var textView2: TextView
 */
+    /*
     lateinit var llMain: LinearLayout
     lateinit var rgGravity: RadioGroup
     lateinit var etName: EditText
     lateinit var btnCreate: Button
     lateinit var btnClear: Button
     var i_id = 0
+*/
+
+    lateinit var sbWeight: SeekBar
+    lateinit var button1: Button
+    lateinit var button2: Button
+    lateinit var lParams1: LinearLayout.LayoutParams
+    lateinit var lParams2: LinearLayout.LayoutParams
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         /*useLayout(R.layout.l015_context_menu)*/
         //createL016(this)
-
+/*
         setContentView(R.layout.l017_create_delete_dynamic_elements)
         llMain = findViewById(R.id.llMain)
         rgGravity = findViewById(R.id.grGravity)
@@ -51,6 +58,18 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
         btnCreate.setOnClickListener(this)
         btnClear.setOnClickListener(this)
+*/
+        setContentView(R.layout.l018_dynamic_weight)
+
+        sbWeight = findViewById(R.id.sbWeight)
+        sbWeight.setOnSeekBarChangeListener(this)
+
+        button1 = findViewById(R.id.button1)
+        button2 = findViewById(R.id.button2)
+
+        lParams1 = button1.layoutParams as LinearLayout.LayoutParams
+        lParams2 = button2.layoutParams as LinearLayout.LayoutParams
+
     }
 /*
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -260,7 +279,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         return super.onPrepareOptionsMenu(menu)
     }
     */
-
+/*
     override fun onClick(v: View?) {
         when (v?.id) {
             R.id.btnCreate -> {
@@ -307,7 +326,26 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             }
         }
     }
+*/
+    override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+        val value = seekBar?.max!! - progress
 
+        lParams1.weight = progress.toFloat()
+        lParams2.weight = value.toFloat()
+
+        button1.text = progress.toString()
+        button2.text = value.toString()
+        button1.layoutParams = lParams2
+        button2.layoutParams = lParams1
+    }
+
+    override fun onStartTrackingTouch(seekBar: SeekBar?) {
+//        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun onStopTrackingTouch(seekBar: SeekBar?) {
+//        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
 }
 /*
 private fun Toast.centerGravitation(): Toast {
