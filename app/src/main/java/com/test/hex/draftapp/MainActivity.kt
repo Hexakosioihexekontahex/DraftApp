@@ -1,5 +1,6 @@
 package com.test.hex.draftapp
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -23,15 +24,16 @@ private const val MENU_SIZE_30 = 6
 */
 
 
-class MainActivity : AppCompatActivity()/*, View.OnClickListener*/
+class MainActivity : AppCompatActivity(), View.OnClickListener
         /*, SeekBar.OnSeekBarChangeListener*/ {
+/*
 private val MENU_ALPHA_ID = 1
 private val MENU_SCALE_ID = 2
 private val MENU_TRANSLATE_ID = 3
 private val MENU_ROTATE_ID = 4
 private val MENU_COMBO_ID = 5
     lateinit var tv: TextView
-
+*/
 
     /*
         lateinit var textView: TextView
@@ -73,6 +75,8 @@ private val MENU_COMBO_ID = 5
     lateinit var tvResult: TextView
     private lateinit var oper: String
 */
+    lateinit var btnActTwo: Button
+    lateinit var intention: Intent
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -117,11 +121,17 @@ private val MENU_COMBO_ID = 5
         button3.setOnClickListener(this)
         button4.setOnClickListener(this)
 */
+/*
         setContentView(R.layout.l020_component_animation)
 
         tv = findViewById(R.id.tv)
 
         registerForContextMenu(tv)
+*/
+        setContentView(R.layout.l021)
+        btnActTwo = findViewById(R.id.btnActTwo)
+        btnActTwo.setOnClickListener(this)
+
     }
 /*
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -451,7 +461,7 @@ private val MENU_COMBO_ID = 5
         return super.onOptionsItemSelected(item)
     }
     */
-
+/*
     override fun onCreateContextMenu(menu: ContextMenu?, v: View?, menuInfo: ContextMenu.ContextMenuInfo?) {
         when (v?.id) {
             R.id.tv -> {
@@ -481,6 +491,15 @@ private val MENU_COMBO_ID = 5
         }
         tv.startAnimation(anim)
         return super.onContextItemSelected(item)
+    }
+*/
+    override fun onClick(v: View?) {
+        when (v?.id) {
+            R.id.btnActTwo -> {
+                intention = Intent(this, ActivityTwo::class.java)
+                startActivity(intention)
+            }
+        }
     }
 }
 /*

@@ -40,4 +40,6 @@
     <string name="right">Right</string>
     <string name="create">Create</string>
     <string name="clear">Clear</string>
+    <string name="go_to_activity_two">GO TO ACTIVITY TWO</string>
+    <string name="this_is_activity_two">This is Activity Two</string>
 </resources>
