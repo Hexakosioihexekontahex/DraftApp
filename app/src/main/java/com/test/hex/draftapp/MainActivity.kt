@@ -2,6 +2,10 @@ package com.test.hex.draftapp
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.view.Menu
+import android.view.MenuItem
+import android.view.View
 import android.widget.*
 /*
 private const val TAG = "myLogs"
@@ -14,21 +18,21 @@ private const val MENU_SIZE_22 = 4
 private const val MENU_SIZE_26 = 5
 private const val MENU_SIZE_30 = 6
 */
-class MainActivity : AppCompatActivity()/*, View.OnClickListener*/
-        , SeekBar.OnSeekBarChangeListener {
+class MainActivity : AppCompatActivity(), View.OnClickListener
+        /*, SeekBar.OnSeekBarChangeListener*/ {
 
-/*
-    lateinit var textView: TextView
-    lateinit var button: Button
-    lateinit var button1: Button
-    lateinit var button2: Button
-    lateinit var button3: Button
-    lateinit var checkBox: CheckBox
-    lateinit var checkBox1: CheckBox
-    lateinit var checkBox2: CheckBox
-    lateinit var textView1: TextView
-    lateinit var textView2: TextView
-*/
+    /*
+        lateinit var textView: TextView
+        lateinit var button: Button
+        lateinit var button1: Button
+        lateinit var button2: Button
+        lateinit var button3: Button
+        lateinit var checkBox: CheckBox
+        lateinit var checkBox1: CheckBox
+        lateinit var checkBox2: CheckBox
+        lateinit var textView1: TextView
+        lateinit var textView2: TextView
+    */
     /*
     lateinit var llMain: LinearLayout
     lateinit var rgGravity: RadioGroup
@@ -37,12 +41,24 @@ class MainActivity : AppCompatActivity()/*, View.OnClickListener*/
     lateinit var btnClear: Button
     var i_id = 0
 */
-
+/*
     lateinit var sbWeight: SeekBar
     lateinit var button1: Button
     lateinit var button2: Button
     lateinit var lParams1: LinearLayout.LayoutParams
     lateinit var lParams2: LinearLayout.LayoutParams
+*/
+    private val MENU_QUIT_ID = 1
+    private val MENU_RESET_ID = 2
+
+    lateinit var etNum1: EditText
+    lateinit var etNum2: EditText
+    lateinit var button1: Button
+    lateinit var button2: Button
+    lateinit var button3: Button
+    lateinit var button4: Button
+    lateinit var tvResult: TextView
+    private lateinit var oper: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,6 +75,7 @@ class MainActivity : AppCompatActivity()/*, View.OnClickListener*/
         btnCreate.setOnClickListener(this)
         btnClear.setOnClickListener(this)
 */
+        /*
         setContentView(R.layout.l018_dynamic_weight)
 
         sbWeight = findViewById(R.id.sbWeight)
@@ -69,7 +86,21 @@ class MainActivity : AppCompatActivity()/*, View.OnClickListener*/
 
         lParams1 = button1.layoutParams as LinearLayout.LayoutParams
         lParams2 = button2.layoutParams as LinearLayout.LayoutParams
+*/
+        setContentView(R.layout.l019_calculator)
 
+        etNum1 = findViewById(R.id.etNum1)
+        etNum2 = findViewById(R.id.etNum2)
+        button1 = findViewById(R.id.button1)
+        button2 = findViewById(R.id.button2)
+        button3 = findViewById(R.id.button3)
+        button4 = findViewById(R.id.button4)
+        tvResult = findViewById(R.id.result)
+
+        button1.setOnClickListener(this)
+        button2.setOnClickListener(this)
+        button3.setOnClickListener(this)
+        button4.setOnClickListener(this)
     }
 /*
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -327,6 +358,7 @@ class MainActivity : AppCompatActivity()/*, View.OnClickListener*/
         }
     }
 */
+    /*
     override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
         val value = seekBar?.max!! - progress
 
@@ -345,6 +377,56 @@ class MainActivity : AppCompatActivity()/*, View.OnClickListener*/
 
     override fun onStopTrackingTouch(seekBar: SeekBar?) {
 //        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+    */
+    override fun onClick(v: View?) {
+        var num1 = 0F
+        var num2 = 0F
+        var result = 0F
+
+        num1 = etNum1.text.toString().toFloat()
+        num2 = etNum2.text.toString().toFloat()
+        when (v?.id) {
+            R.id.button1 -> {
+                oper = "+"
+                result = num1 + num2
+            }
+            R.id.button2 -> {
+                oper = "-"
+                result = num1 - num2
+            }
+            R.id.button3 -> {
+                oper = "*"
+                result = num1 * num2
+            }
+            R.id.button4 -> {
+                oper = "/"
+                result = num1 / num2
+            }
+        }
+        if (oper == "/" && num2 == 0F) {
+            tvResult.text = "На ноль делить нельзя!"
+        } else {
+            tvResult.text = "$num1 $oper $num2 = $result"
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menu?.add(0, MENU_RESET_ID, 0, "Reset")
+        menu?.add(0, MENU_QUIT_ID, 0, "Quit")
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when (item?.itemId) {
+            MENU_RESET_ID -> {
+                etNum1.setText("")
+                etNum2.setText("")
+                tvResult.text = ""
+            }
+            MENU_QUIT_ID -> finish()
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
 /*
