@@ -3,9 +3,12 @@ package com.test.hex.draftapp
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
+import android.view.ContextMenu
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.*
 /*
 private const val TAG = "myLogs"
@@ -18,8 +21,17 @@ private const val MENU_SIZE_22 = 4
 private const val MENU_SIZE_26 = 5
 private const val MENU_SIZE_30 = 6
 */
-class MainActivity : AppCompatActivity(), View.OnClickListener
+
+
+class MainActivity : AppCompatActivity()/*, View.OnClickListener*/
         /*, SeekBar.OnSeekBarChangeListener*/ {
+private val MENU_ALPHA_ID = 1
+private val MENU_SCALE_ID = 2
+private val MENU_TRANSLATE_ID = 3
+private val MENU_ROTATE_ID = 4
+private val MENU_COMBO_ID = 5
+    lateinit var tv: TextView
+
 
     /*
         lateinit var textView: TextView
@@ -48,6 +60,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener
     lateinit var lParams1: LinearLayout.LayoutParams
     lateinit var lParams2: LinearLayout.LayoutParams
 */
+    /*
     private val MENU_QUIT_ID = 1
     private val MENU_RESET_ID = 2
 
@@ -59,6 +72,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener
     lateinit var button4: Button
     lateinit var tvResult: TextView
     private lateinit var oper: String
+*/
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -75,7 +89,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener
         btnCreate.setOnClickListener(this)
         btnClear.setOnClickListener(this)
 */
-        /*
+/*
         setContentView(R.layout.l018_dynamic_weight)
 
         sbWeight = findViewById(R.id.sbWeight)
@@ -87,6 +101,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener
         lParams1 = button1.layoutParams as LinearLayout.LayoutParams
         lParams2 = button2.layoutParams as LinearLayout.LayoutParams
 */
+/*
         setContentView(R.layout.l019_calculator)
 
         etNum1 = findViewById(R.id.etNum1)
@@ -101,6 +116,12 @@ class MainActivity : AppCompatActivity(), View.OnClickListener
         button2.setOnClickListener(this)
         button3.setOnClickListener(this)
         button4.setOnClickListener(this)
+*/
+        setContentView(R.layout.l020_component_animation)
+
+        tv = findViewById(R.id.tv)
+
+        registerForContextMenu(tv)
     }
 /*
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -372,13 +393,14 @@ class MainActivity : AppCompatActivity(), View.OnClickListener
     }
 
     override fun onStartTrackingTouch(seekBar: SeekBar?) {
-//        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
     }
 
     override fun onStopTrackingTouch(seekBar: SeekBar?) {
-//        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
     }
     */
+/*
     override fun onClick(v: View?) {
         var num1 = 0F
         var num2 = 0F
@@ -427,6 +449,38 @@ class MainActivity : AppCompatActivity(), View.OnClickListener
             MENU_QUIT_ID -> finish()
         }
         return super.onOptionsItemSelected(item)
+    }
+    */
+
+    override fun onCreateContextMenu(menu: ContextMenu?, v: View?, menuInfo: ContextMenu.ContextMenuInfo?) {
+        when (v?.id) {
+            R.id.tv -> {
+                menu?.add(0, MENU_ALPHA_ID, 0, "alpha")
+                menu?.add(0, MENU_SCALE_ID, 0, "scale")
+                menu?.add(0, MENU_TRANSLATE_ID, 0, "translate")
+                menu?.add(0, MENU_ROTATE_ID, 0, "rotate")
+                menu?.add(0, MENU_COMBO_ID, 0, "combo")
+            }
+        }
+        super.onCreateContextMenu(menu, v, menuInfo)
+    }
+
+    override fun onContextItemSelected(item: MenuItem?): Boolean {
+        lateinit var anim: Animation
+        when (item?.itemId) {
+            MENU_ALPHA_ID -> anim =
+                    AnimationUtils.loadAnimation(this, R.anim.myalpha)
+            MENU_SCALE_ID -> anim =
+                    AnimationUtils.loadAnimation(this, R.anim.myscale)
+            MENU_TRANSLATE_ID -> anim =
+                    AnimationUtils.loadAnimation(this, R.anim.mytrans)
+            MENU_ROTATE_ID -> anim =
+                    AnimationUtils.loadAnimation(this, R.anim.myrotate)
+            MENU_COMBO_ID -> anim =
+                    AnimationUtils.loadAnimation(this, R.anim.mycombo)
+        }
+        tv.startAnimation(anim)
+        return super.onContextItemSelected(item)
     }
 }
 /*
