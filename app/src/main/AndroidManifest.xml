@@ -37,9 +37,22 @@
         <activity android:name=".numbered.L019Calculator" />
         <activity android:name=".numbered.L020ComponentAnimation" />
         <activity android:name=".numbered.L023" />
-        <activity android:name=".numbered.L024"
+        <activity
+            android:name=".numbered.L024"
             android:label="@string/go_to_activity_two"
-            android:theme="@style/Theme.AppCompat.Dialog">
+            android:theme="@style/Theme.AppCompat.Dialog" />
+        <activity android:name=".numbered.L026" />
+        <activity android:name=".numbered.L026Time">
+            <intent-filter>
+                <action android:name="com.test.hex.intent.action.time"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".numbered.L026Date">
+            <intent-filter>
+                <action android:name="com.test.hex.intent.action.date"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
     </application>
 

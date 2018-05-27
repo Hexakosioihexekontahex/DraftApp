@@ -43,4 +43,6 @@
     <string name="go_to_activity_two">GO TO ACTIVITY TWO</string>
     <string name="this_is_activity_two">This is Activity Two</string>
     <string name="cl">CL</string>
+    <string name="time">time</string>
+    <string name="date">date</string>
 </resources>
