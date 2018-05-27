@@ -36,7 +36,8 @@
         <activity android:name=".numbered.L018DynamicWeight" />
         <activity android:name=".numbered.L019Calculator" />
         <activity android:name=".numbered.L020ComponentAnimation" />
-        <activity android:name=".numbered.L023"></activity>
+        <activity android:name=".numbered.L023" />
+        <activity android:name=".numbered.L024"></activity>
     </application>
 
 </manifest>
