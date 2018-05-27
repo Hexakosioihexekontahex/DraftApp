@@ -70,7 +70,10 @@
         <activity android:name=".numbered.L028" />
         <activity android:name=".numbered.L028Activity" />
         <activity android:name=".numbered.L029" />
-        <activity android:name=".numbered.L029Activity"></activity>
+        <activity android:name=".numbered.L029Activity" />
+        <activity android:name=".numbered.L030" />
+        <activity android:name=".numbered.L030Color" />
+        <activity android:name=".numbered.L030Align"></activity>
     </application>
 
 </manifest>
