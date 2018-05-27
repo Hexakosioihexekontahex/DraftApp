@@ -68,7 +68,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".numbered.L028" />
-        <activity android:name=".numbered.L028Activity"></activity>
+        <activity android:name=".numbered.L028Activity" />
+        <activity android:name=".numbered.L029" />
+        <activity android:name=".numbered.L029Activity"></activity>
     </application>
 
 </manifest>
