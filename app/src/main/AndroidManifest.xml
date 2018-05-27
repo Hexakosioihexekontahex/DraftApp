@@ -44,13 +44,25 @@
         <activity android:name=".numbered.L026" />
         <activity android:name=".numbered.L026Time">
             <intent-filter>
-                <action android:name="com.test.hex.intent.action.time"/>
+                <action android:name="com.test.hex.intent.action.time" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".numbered.L026Date">
             <intent-filter>
-                <action android:name="com.test.hex.intent.action.date"/>
+                <action android:name="com.test.hex.intent.action.date" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".numbered.L027" />
+        <activity android:name=".numbered.L027DateTime"
+            android:label="Date/Time">
+            <intent-filter>
+                <action android:name="com.test.hex.intent.action.date2" />
+                <action android:name="com.test.hex.intent.action.time2" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
