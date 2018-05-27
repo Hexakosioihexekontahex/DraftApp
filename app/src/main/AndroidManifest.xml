@@ -37,7 +37,10 @@
         <activity android:name=".numbered.L019Calculator" />
         <activity android:name=".numbered.L020ComponentAnimation" />
         <activity android:name=".numbered.L023" />
-        <activity android:name=".numbered.L024"></activity>
+        <activity android:name=".numbered.L024"
+            android:label="@string/go_to_activity_two"
+            android:theme="@style/Theme.AppCompat.Dialog">
+        </activity>
     </application>
 
 </manifest>
