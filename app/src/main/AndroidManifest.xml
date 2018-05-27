@@ -57,7 +57,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".numbered.L027" />
-        <activity android:name=".numbered.L027DateTime"
+        <activity
+            android:name=".numbered.L027DateTime"
             android:label="Date/Time">
             <intent-filter>
                 <action android:name="com.test.hex.intent.action.date2" />
@@ -66,6 +67,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name=".numbered.L028" />
+        <activity android:name=".numbered.L028Activity"></activity>
     </application>
 
 </manifest>
