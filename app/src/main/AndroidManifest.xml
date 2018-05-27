@@ -16,7 +16,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ActivityTwo"></activity>
+        <activity android:name=".numbered.L004ActivityMain" />
+        <activity android:name=".numbered.L005Myscreen" />
+        <activity android:name=".numbered.L006Layout" />
+        <activity android:name=".numbered.L006LinearInLinear" />
+        <activity android:name=".numbered.L006RelativeLayout" />
+        <activity android:name=".numbered.L006TableLayout" />
+        <activity android:name=".numbered.L007LayoutGravity" />
+        <activity android:name=".numbered.L007LayoutMargin" />
+        <activity android:name=".numbered.L007LayoutWeight" />
+        <activity android:name=".numbered.L008ViewById" />
+        <activity android:name=".numbered.L009ClickButton" />
+        <activity android:name=".numbered.L010ClickButtons" />
+        <activity android:name=".numbered.L011Resources" />
+        <activity android:name=".numbered.L014Menu" />
+        <activity android:name=".numbered.L015ContextMenu" />
+        <activity android:name=".numbered.L016" />
+        <activity android:name=".numbered.L017CreateDeleteDynamicElements" />
+        <activity android:name=".numbered.L018DynamicWeight" />
+        <activity android:name=".numbered.L019Calculator" />
+        <activity android:name=".numbered.L020ComponentAnimation" />
     </application>
 
 </manifest>
