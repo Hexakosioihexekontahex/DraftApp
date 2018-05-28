@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.test.hex.draftapp">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -74,7 +77,15 @@
         <activity android:name=".numbered.L030" />
         <activity android:name=".numbered.L030Color" />
         <activity android:name=".numbered.L030Align" />
-        <activity android:name=".numbered.L031"></activity>
+        <activity android:name=".numbered.L031" />
+        <activity android:name=".numbered.L032" />
+        <activity android:name=".numbered.L032Activity">
+            <intent-filter tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.VIEW"/>
+                <data android:scheme="http"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
