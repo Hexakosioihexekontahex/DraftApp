@@ -73,7 +73,8 @@
         <activity android:name=".numbered.L029Activity" />
         <activity android:name=".numbered.L030" />
         <activity android:name=".numbered.L030Color" />
-        <activity android:name=".numbered.L030Align"></activity>
+        <activity android:name=".numbered.L030Align" />
+        <activity android:name=".numbered.L031"></activity>
     </application>
 
 </manifest>

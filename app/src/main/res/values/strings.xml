@@ -52,4 +52,7 @@
     <string name="red">red</string>
     <string name="blue">blue</string>
     <string name="green">green</string>
+    <string name="web">web</string>
+    <string name="map">map</string>
+    <string name="call">call</string>
 </resources>
