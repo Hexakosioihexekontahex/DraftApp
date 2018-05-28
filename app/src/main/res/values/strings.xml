@@ -55,4 +55,6 @@
     <string name="web">web</string>
     <string name="map">map</string>
     <string name="call">call</string>
+    <string name="save">save</string>
+    <string name="load">load</string>
 </resources>
