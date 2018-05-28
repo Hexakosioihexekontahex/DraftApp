@@ -31,120 +31,124 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         when(v?.id) {
             R.id.okButton -> {
                 when (text) {
-                    "l004" -> {
+                    "004" -> {
                         intention = Intent(this, L004ActivityMain::class.java)
                         startActivity(intention)
                     }
-                    "l005" -> {
+                    "005" -> {
                         intention = Intent(this, L005Myscreen::class.java)
                         startActivity(intention)
                     }
-                    "l006_layout" -> {
+                    "006_layout" -> {
                         intention = Intent(this, L006Layout::class.java)
                         startActivity(intention)
                     }
-                    "l006_linear" -> {
+                    "006_linear" -> {
                         intention = Intent(this, L006LinearInLinear::class.java)
                         startActivity(intention)
                     }
-                    "l006_relative" -> {
+                    "006_relative" -> {
                         intention = Intent(this, L006RelativeLayout::class.java)
                         startActivity(intention)
                     }
-                    "l006_table" -> {
+                    "006_table" -> {
                         intention = Intent(this, L006TableLayout::class.java)
                         startActivity(intention)
                     }
-                    "l007_gravity" -> {
+                    "007_gravity" -> {
                         intention = Intent(this, L007LayoutGravity::class.java)
                         startActivity(intention)
                     }
-                    "l007_margin" -> {
+                    "007_margin" -> {
                         intention = Intent(this, L007LayoutMargin::class.java)
                         startActivity(intention)
                     }
-                    "l007_weight" -> {
+                    "007_weight" -> {
                         intention = Intent(this, L007LayoutWeight::class.java)
                         startActivity(intention)
                     }
-                    "l008" -> {
+                    "008" -> {
                         intention = Intent(this, L008ViewById::class.java)
                         startActivity(intention)
                     }
-                    "l009" -> {
+                    "009" -> {
                         intention = Intent(this, L009ClickButton::class.java)
                         startActivity(intention)
                     }
-                    "l010" -> {
+                    "010" -> {
                         intention = Intent(this, L010ClickButtons::class.java)
                         startActivity(intention)
                     }
-                    "l011" -> {
+                    "011" -> {
                         intention = Intent(this, L011Resources::class.java)
                         startActivity(intention)
                     }
-                    "l014" -> {
+                    "014" -> {
                         intention = Intent(this, L014Menu::class.java)
                         startActivity(intention)
                     }
-                    "l015" -> {
+                    "015" -> {
                         intention = Intent(this, L015ContextMenu::class.java)
                         startActivity(intention)
                     }
-                    "l016" -> {
+                    "016" -> {
                         intention = Intent(this, L016::class.java)
                         startActivity(intention)
                     }
-                    "l017" -> {
+                    "017" -> {
                         intention = Intent(this, L017CreateDeleteDynamicElements::class.java)
                         startActivity(intention)
                     }
-                    "l018" -> {
+                    "018" -> {
                         intention = Intent(this, L018DynamicWeight::class.java)
                         startActivity(intention)
                     }
-                    "l019" -> {
+                    "019" -> {
                         intention = Intent(this, L019Calculator::class.java)
                         startActivity(intention)
                     }
-                    "l020" -> {
+                    "020" -> {
                         intention = Intent(this, L020ComponentAnimation::class.java)
                         startActivity(intention)
                     }
-                    "l023" -> {
+                    "023" -> {
                         intention = Intent(this, L023::class.java)
                         startActivity(intention)
                     }
-                    "l026" -> {
+                    "026" -> {
                         intention = Intent(this, L026::class.java)
                         startActivity(intention)
                     }
-                    "l027" -> {
+                    "027" -> {
                         intention = Intent(this, L027::class.java)
                         startActivity(intention)
                     }
-                    "l028" -> {
+                    "028" -> {
                         intention = Intent(this, L028::class.java)
                         startActivity(intention)
                     }
-                    "l029" -> {
+                    "029" -> {
                         intention = Intent(this, L029::class.java)
                         startActivity(intention)
                     }
-                    "l030" -> {
+                    "030" -> {
                         intention = Intent(this, L030::class.java)
                         startActivity(intention)
                     }
-                    "l031" -> {
+                    "031" -> {
                         intention = Intent(this, L031::class.java)
                         startActivity(intention)
                     }
-                    "l032" -> {
+                    "032" -> {
                         intention = Intent(this, L032::class.java)
                         startActivity(intention)
                     }
-                    "l033" -> {
+                    "033" -> {
                         intention = Intent(this, L033::class.java)
+                        startActivity(intention)
+                    }
+                    "034" -> {
+                        intention = Intent(this, L034::class.java)
                         startActivity(intention)
                     }
 

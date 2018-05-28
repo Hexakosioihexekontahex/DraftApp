@@ -57,4 +57,7 @@
     <string name="call">call</string>
     <string name="save">save</string>
     <string name="load">load</string>
+    <string name="email">Email</string>
+    <string name="add">add</string>
+    <string name="read">read</string>
 </resources>

@@ -88,7 +88,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".numbered.L033"></activity>
+        <activity android:name=".numbered.L033" />
+        <activity android:name=".numbered.L034"></activity>
     </application>
 
 </manifest>
