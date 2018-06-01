@@ -89,7 +89,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".numbered.L033" />
-        <activity android:name=".numbered.L034"></activity>
+        <activity android:name=".numbered.L034" />
+        <activity android:name=".numbered.L036" />
     </application>
 
 </manifest>

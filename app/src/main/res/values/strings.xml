@@ -63,4 +63,14 @@
     <string name="id">Id</string>
     <string name="delete">Delete</string>
     <string name="update">Update</string>
+    <string name="countries">Countries</string>
+    <string name="all">All</string>
+    <string name="function">Function</string>
+    <string name="population">Population</string>
+    <string name="population_more_than"><![CDATA[Population >]]></string>
+    <string name="population_by_regions">By reg</string>
+    <string name="number">number</string>
+    <string name="population_by_region_more_than"><![CDATA[By reg >]]></string>
+    <string name="sort">Sort</string>
+    <string name="region">Region</string>
 </resources>
