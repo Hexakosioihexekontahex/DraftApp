@@ -3,6 +3,7 @@ package com.test.hex.draftapp.numbered
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+//import org.jetbrains.exposed.sql.Table
 
 const val DATABASE_VERSION = 1
 const val DATABASE_NAME = "contactDb"

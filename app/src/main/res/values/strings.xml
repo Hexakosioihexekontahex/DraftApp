@@ -60,4 +60,7 @@
     <string name="email">Email</string>
     <string name="add">add</string>
     <string name="read">read</string>
+    <string name="id">Id</string>
+    <string name="delete">Delete</string>
+    <string name="update">Update</string>
 </resources>

@@ -13,9 +13,12 @@ class L034 : AppCompatActivity(), View.OnClickListener {
 
     lateinit var etName: EditText
     lateinit var etEmail: EditText
+    lateinit var etId: EditText
     lateinit var addBtn: Button
     lateinit var readBtn: Button
     lateinit var clearBtn: Button
+    lateinit var updBtn: Button
+    lateinit var delBtn: Button
     lateinit var dbHelper: L034DBHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,14 +27,19 @@ class L034 : AppCompatActivity(), View.OnClickListener {
 
         etName = findViewById(R.id.etName)
         etEmail = findViewById(R.id.etEmail)
+        etId = findViewById(R.id.etId)
 
         addBtn = findViewById(R.id.addBtn)
         readBtn = findViewById(R.id.readBtn)
         clearBtn = findViewById(R.id.clearBtn)
+        updBtn = findViewById(R.id.updBtn)
+        delBtn = findViewById(R.id.delBtn)
 
         addBtn.setOnClickListener(this)
         readBtn.setOnClickListener(this)
         clearBtn.setOnClickListener(this)
+        updBtn.setOnClickListener(this)
+        delBtn.setOnClickListener(this)
 
         dbHelper = L034DBHelper(this)
     }
@@ -39,6 +47,7 @@ class L034 : AppCompatActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         val name = etName.text.toString()
         val email = etEmail.text.toString()
+        val id = etId.text.toString()
 
         val database = dbHelper.writableDatabase
         val contentValues = ContentValues()
@@ -70,6 +79,28 @@ class L034 : AppCompatActivity(), View.OnClickListener {
             }
             R.id.clearBtn -> {
                 database.delete(TABLE_CONTACTS, null, null)
+            }
+            R.id.updBtn -> {
+                if (id.equals("", ignoreCase = true)){
+                    return
+                }
+                contentValues.put(KEY_MAIL, email)
+                contentValues.put(KEY_NAME, name)
+                val updateCount = database
+                        .update(TABLE_CONTACTS,
+                        contentValues,
+                        "$KEY_ID= ?",
+                        arrayOf(id))
+                Log.d("dbLog", "updates rows count $updateCount")
+            }
+            R.id.delBtn -> {
+                if (id.equals("", ignoreCase = true)){
+                    return
+                }
+                val delCount = database
+                        .delete(TABLE_CONTACTS,
+                                "$KEY_ID= $id", null)
+                Log.d("dbLog", "deleted rows count $delCount")
             }
         }
         dbHelper.close()
