@@ -91,6 +91,7 @@
         <activity android:name=".numbered.L033" />
         <activity android:name=".numbered.L034" />
         <activity android:name=".numbered.L036" />
+        <activity android:name=".numbered.L037"></activity>
     </application>
 
 </manifest>

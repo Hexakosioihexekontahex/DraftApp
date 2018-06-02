@@ -14,11 +14,11 @@ import android.widget.EditText
 import android.widget.RadioGroup
 import com.test.hex.draftapp.R
 
-const val LOG_TAG = "L036Logs"
-val name = arrayOf("China", "USA", "Brazil", "Russia", "Japan", "Germany",
+private const val LOG_TAG = "L036Logs"
+private val name = arrayOf("China", "USA", "Brazil", "Russia", "Japan", "Germany",
         "Egypt", "Italy", "France", "Canada")
-val people = arrayOf(1400, 311, 195, 142, 128, 82, 80, 60, 66, 35)
-val region = arrayOf("Asia", "America", "America", "Europe", "Asia",
+private val people = arrayOf(1400, 311, 195, 142, 128, 82, 80, 60, 66, 35)
+private val region = arrayOf("Asia", "America", "America", "Europe", "Asia",
         "Europe", "Africa", "Europe", "Europe", "America")
 
 
