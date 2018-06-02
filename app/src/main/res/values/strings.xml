@@ -76,4 +76,5 @@
     <string name="insert">Insert</string>
     <string name="insert_by_transaction">Insert by transaction</string>
     <string name="insert_by_transaction_with_statement">Insert by transaction with statement</string>
+    <string name="layout_with_textview">Layout with TextView</string>
 </resources>
