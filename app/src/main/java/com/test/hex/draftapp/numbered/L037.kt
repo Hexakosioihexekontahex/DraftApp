@@ -83,7 +83,7 @@ class L037 : AppCompatActivity() {
         }
     }
 
-    class DBHelper(context: Context) : SQLiteOpenHelper(context,
+    private class DBHelper(context: Context) : SQLiteOpenHelper(context,
             "myBD", null, 1) {
         override fun onCreate(db: SQLiteDatabase?) {
             Log.d(LOG_TAG, "~~~ onCreate database ~~~")
