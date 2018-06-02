@@ -159,6 +159,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                         intention = Intent(this, L037::class.java)
                         startActivity(intention)
                     }
+                    "038" -> {
+                        intention = Intent(this, L038::class.java)
+                        startActivity(intention)
+                    }
 
                     else -> Toast.makeText(this,
                             "Type exist activity name",

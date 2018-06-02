@@ -73,4 +73,7 @@
     <string name="population_by_region_more_than"><![CDATA[By reg >]]></string>
     <string name="sort">Sort</string>
     <string name="region">Region</string>
+    <string name="insert">Insert</string>
+    <string name="insert_by_transaction">Insert by transaction</string>
+    <string name="insert_by_transaction_with_statement">Insert by transaction with statement</string>
 </resources>
