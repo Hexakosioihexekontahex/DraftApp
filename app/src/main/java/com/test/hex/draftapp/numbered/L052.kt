@@ -2,7 +2,6 @@ package com.test.hex.draftapp.numbered
 
 import android.content.ContentValues
 import android.content.Context
-import android.content.CursorLoader
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
@@ -21,9 +20,9 @@ private const val CM_DELETE_ID = 1
 class L052 : AppCompatActivity() {
 
     lateinit var lvData: ListView
-    lateinit var db: L052DB
-    lateinit var scAdapter: SimpleCursorAdapter
-    lateinit var cursor: Cursor
+    private lateinit var db: L052DB
+    private lateinit var scAdapter: SimpleCursorAdapter
+    private lateinit var cursor: Cursor
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -77,7 +76,8 @@ private const val COLUMN_ID = "_id"
 private const val COLUMN_IMG = "img"
 private const val COLUMN_TXT = "txt"
 private const val DB_CREATE =
-        "create table + $DB_TABLE($COLUMN_ID integer primary key autoincrement, $COLUMN_IMG integer, $COLUMN_TXT text);"
+        "create table $DB_TABLE($COLUMN_ID integer primary key autoincrement," +
+                " $COLUMN_IMG integer, $COLUMN_TXT text);"
 
 
 class L052DB(ctx: Context) {
@@ -87,7 +87,7 @@ class L052DB(ctx: Context) {
     private lateinit var mDB: SQLiteDatabase
 
     fun open() {
-        mDBHelper = DBHelper(mCtx)
+        mDBHelper = DBHelper(mCtx, DB_NAME, null, DB_VERSION)
         mDB = mDBHelper.writableDatabase
     }
 
@@ -95,11 +95,13 @@ class L052DB(ctx: Context) {
         mDBHelper.close()
     }
 
-    fun getAllData() = mDB.query(DB_TABLE, null, null, null,
-            null, null, null)!!
+    fun getAllData(): Cursor = mDB.query(DB_TABLE, null, null, null,
+            null, null, null)
+
     fun delRec(id: Long) {
         mDB.delete(DB_TABLE, "$COLUMN_ID = $id", null)
     }
+
     fun addRec(text: String, img: Int) {
         val cv = ContentValues()
         cv.put(COLUMN_TXT, text)
@@ -107,8 +109,10 @@ class L052DB(ctx: Context) {
         mDB.insert(DB_TABLE, null, cv)
     }
 
-    private inner class DBHelper(context: Context?)
-        : SQLiteOpenHelper(context, DB_NAME, null, DB_VERSION) {
+    private inner class DBHelper(context: Context?,
+                                 name: String?,
+                                 factory: SQLiteDatabase.CursorFactory?,
+                                 version: Int) : SQLiteOpenHelper(context, name, factory, version) {
         override fun onCreate(db: SQLiteDatabase?) {
             db?.execSQL(DB_CREATE)
 
