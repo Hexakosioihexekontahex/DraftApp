@@ -80,6 +80,8 @@
     <string name="staff_list">Staff list</string>
     <string name="textview">TextView</string>
     <string name="get_checked_items">Get checked items</string>
+    <string name="add_entry">Add entry</string>
+    <string name="img">img</string>
     <string-array name="names">
         <item>"Иван"</item>
         <item>"Мария"</item>
