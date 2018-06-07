@@ -83,6 +83,7 @@
     <string name="add_entry">Add entry</string>
     <string name="delete_entry">Delete entry</string>
     <string name="img">img</string>
+    <string name="basket">Basket</string>
     <string-array name="names">
         <item>"Иван"</item>
         <item>"Мария"</item>
