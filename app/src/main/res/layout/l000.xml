@@ -8,37 +8,10 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <GridView
+        android:id="@+id/gvMain"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/linearLayout1"
-        android:layout_marginLeft="10pt"
-        android:layout_marginRight="10pt"
-        android:layout_marginTop="3pt">
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/editText"
-            android:layout_marginLeft="5pt"
-            android:inputType="text"
-            android:layout_marginStart="5pt"
-            android:hint="@string/type_here"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="2.5"
-            android:id="@+id/okButton"
-            android:layout_marginLeft="5pt"
-            android:layout_marginStart="5pt"
-            android:text="@string/ok"/>
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="2.5"
-            android:id="@+id/clButton"
-            android:layout_marginLeft="5pt"
-            android:layout_marginStart="5pt"
-            android:text="@string/cl"/>
-    </LinearLayout>
+        android:layout_height="match_parent">
+
+    </GridView>
 </LinearLayout>
