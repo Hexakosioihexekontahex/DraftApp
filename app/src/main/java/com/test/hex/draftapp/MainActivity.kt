@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         val data: MutableList<String> = mutableListOf("004", "005", "6_layout", "6_linear", "6_table",
                 "7_gravity", "7_margin", "7_weight")
-        for (i in 8..60) {
+        for (i in 8..61) {//TODO inc second
             data.add("${if(i<100) "0" else ""}${if(i<10) "0" else ""}$i")
         }
         data.apply {
@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity() {
             remove("025")
             remove("035")
             remove("047")
+            //TODO if need skip something
         }
 
         aAdapter = ArrayAdapter(this, R.layout.l000_item, R.id.tvText,
@@ -52,7 +53,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun clickGridElem(view: View) {
-       when ((view as? TextView)?.text) {
+        when ((view as? TextView)?.text) {
             "004" -> {
                 intention = Intent(this, L004ActivityMain::class.java)
                 startActivity(intention)
@@ -269,7 +270,11 @@ class MainActivity : AppCompatActivity() {
                intention = Intent(this, L060::class.java)
                startActivity(intention)
             }
-
+            "061" -> {
+               intention = Intent(this, L061::class.java)
+               startActivity(intention)
+            }
+            //TODO add new one
             else -> Toast.makeText(this,
                     "Select exist activity name",
                     Toast.LENGTH_SHORT)
