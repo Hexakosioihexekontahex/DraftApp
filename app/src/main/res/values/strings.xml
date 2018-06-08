@@ -92,6 +92,9 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="saved">Saved</string>
+    <string name="items">items</string>
+    <string name="adapter">adapter</string>
+    <string name="cursor">cursor</string>
     <string-array name="names">
         <item>"Иван"</item>
         <item>"Мария"</item>
