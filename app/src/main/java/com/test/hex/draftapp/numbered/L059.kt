@@ -35,7 +35,7 @@ class L059 : AppCompatActivity() {
     }
 
     private val myCallBack = DatePickerDialog.OnDateSetListener {
-        view, year, month, dayOfMonth ->
+        _, year, month, dayOfMonth ->
         myYear = year
         myMonth = month
         myDay = dayOfMonth

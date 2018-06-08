@@ -87,6 +87,11 @@
     <string name="test">test</string>
     <string name="header">Header</string>
     <string name="footer">Footer</string>
+    <string name="exit">exit</string>
+    <string name="save_data">Save data</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="saved">Saved</string>
     <string-array name="names">
         <item>"Иван"</item>
         <item>"Мария"</item>

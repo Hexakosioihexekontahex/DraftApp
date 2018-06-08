@@ -7,8 +7,8 @@ import android.widget.GridView
 import com.test.hex.draftapp.R
 
 class L057 : AppCompatActivity() {
-
-    val data = arrayOf("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k")
+//    val data = arrayOf("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k")
+    val data: Array<String> = ('a'..'k').map { toString() }.toTypedArray()
 
     lateinit var gvMain: GridView
     private lateinit var aAdapter: ArrayAdapter<String>

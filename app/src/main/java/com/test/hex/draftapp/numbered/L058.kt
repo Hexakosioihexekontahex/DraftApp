@@ -36,7 +36,7 @@ class L058 : AppCompatActivity() {
     }
 
     @SuppressLint("SetTextI18n")
-    private var myCallBack = TimePickerDialog.OnTimeSetListener { view, hourOfDay, minute ->
+    private var myCallBack = TimePickerDialog.OnTimeSetListener { _, hourOfDay, minute ->
         myHour = hourOfDay
         myMinute = minute
         tvTime.text = "Time is $myHour hours $myMinute minutes"
