@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         val data: MutableList<String> = mutableListOf("004", "005", "6_layout", "6_linear", "6_table",
                 "7_gravity", "7_margin", "7_weight")
-        for (i in 8..69) {//TODO inc second
+        for (i in 8..70) {//TODO inc second
             data.add("${if(i<100) "0" else ""}${if(i<10) "0" else ""}$i")
         }
         data.apply {
@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
             remove("047")
             //TODO if need skip something
         }
+        data.reverse()
 
         aAdapter = ArrayAdapter(this, R.layout.l000_item, R.id.tvText,
                 data.toTypedArray())
@@ -304,6 +305,10 @@ class MainActivity : AppCompatActivity() {
             }
             "069" -> {
                 intention = Intent(this, L069::class.java)
+                startActivity(intention)
+            }
+            "070" -> {
+                intention = Intent(this, L070::class.java)
                 startActivity(intention)
             }
             //TODO add new one

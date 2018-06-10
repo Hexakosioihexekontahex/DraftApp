@@ -100,6 +100,7 @@
     <string name="main">Main</string>
     <string name="send">Send</string>
     <string name="second">Second</string>
+    <string name="count">Count</string>
     <string-array name="names">
         <item>"Иван"</item>
         <item>"Мария"</item>
