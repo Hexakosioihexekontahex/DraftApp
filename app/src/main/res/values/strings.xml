@@ -97,6 +97,9 @@
     <string name="cursor">cursor</string>
     <string name="infinity">Infinity</string>
     <string name="progress">Progress</string>
+    <string name="main">Main</string>
+    <string name="send">Send</string>
+    <string name="second">Second</string>
     <string-array name="names">
         <item>"Иван"</item>
         <item>"Мария"</item>
