@@ -126,7 +126,9 @@
         <activity android:name=".numbered.L069Second" />
         <activity android:name=".numbered.L070" />
         <activity android:name=".numbered.L071" />
-        <activity android:name=".numbered.L071PrefActivity"></activity>
+        <activity android:name=".numbered.L071PrefActivity" />
+        <activity android:name=".numbered.L072" />
+        <activity android:name=".numbered.L072PrefActivity"></activity>
     </application>
 
 </manifest>
