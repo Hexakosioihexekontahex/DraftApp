@@ -95,6 +95,8 @@
     <string name="items">items</string>
     <string name="adapter">adapter</string>
     <string name="cursor">cursor</string>
+    <string name="infinity">Infinity</string>
+    <string name="progress">Progress</string>
     <string-array name="names">
         <item>"Иван"</item>
         <item>"Мария"</item>
