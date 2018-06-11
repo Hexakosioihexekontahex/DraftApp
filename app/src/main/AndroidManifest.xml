@@ -4,6 +4,7 @@
     package="com.test.hex.draftapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -133,6 +134,7 @@
         <activity android:name=".numbered.L073PrefActivity" />
         <activity android:name=".numbered.L074" />
         <activity android:name=".numbered.L074PrefActivity" />
+        <activity android:name=".numbered.L075" />
     </application>
 
 </manifest>

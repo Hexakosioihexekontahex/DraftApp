@@ -101,6 +101,10 @@
     <string name="send">Send</string>
     <string name="second">Second</string>
     <string name="count">Count</string>
+    <string name="write_file">Write file</string>
+    <string name="read_file">Read file</string>
+    <string name="write_file_to_sd">Write file to SDcard</string>
+    <string name="read_file_from_sd">Read file from SDcard</string>
     <string-array name="names">
         <item>"Иван"</item>
         <item>"Мария"</item>
