@@ -105,6 +105,10 @@
     <string name="read_file">Read file</string>
     <string name="write_file_to_sd">Write file to SDcard</string>
     <string name="read_file_from_sd">Read file from SDcard</string>
+    <string name="text_tab1">This is first tab</string>
+    <string name="text_tab2">This is second tab</string>
+    <string name="text_tab3">This is third tab</string>
+    <string name="text_tab_header">This is tab header</string>
     <string-array name="names">
         <item>"Иван"</item>
         <item>"Мария"</item>
