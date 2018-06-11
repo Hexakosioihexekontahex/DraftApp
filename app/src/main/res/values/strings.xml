@@ -111,6 +111,8 @@
     <string name="text_tab_header">This is tab header</string>
     <string name="text_act1">This is first Activity</string>
     <string name="text_act2">This is second Activity</string>
+    <string name="l078_text">Created from layoutInflater</string>
+    <string name="l078_text2">This was created manually</string>
     <string-array name="names">
         <item>"Иван"</item>
         <item>"Мария"</item>
