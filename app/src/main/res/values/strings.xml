@@ -109,6 +109,8 @@
     <string name="text_tab2">This is second tab</string>
     <string name="text_tab3">This is third tab</string>
     <string name="text_tab_header">This is tab header</string>
+    <string name="text_act1">This is first Activity</string>
+    <string name="text_act2">This is second Activity</string>
     <string-array name="names">
         <item>"Иван"</item>
         <item>"Мария"</item>
