@@ -113,6 +113,7 @@
     <string name="text_act2">This is second Activity</string>
     <string name="l078_text">Created from layoutInflater</string>
     <string name="l078_text2">This was created manually</string>
+    <string name="start">Start</string>
     <string-array name="names">
         <item>"Иван"</item>
         <item>"Мария"</item>
