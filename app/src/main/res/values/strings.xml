@@ -115,6 +115,7 @@
     <string name="l078_text2">This was created manually</string>
     <string name="start">Start</string>
     <string name="connect">Connect</string>
+    <string name="download_files">Download files</string>
     <string-array name="names">
         <item>"Иван"</item>
         <item>"Мария"</item>
