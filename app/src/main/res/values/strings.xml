@@ -117,6 +117,8 @@
     <string name="connect">Connect</string>
     <string name="download_files">Download files</string>
     <string name="details">Details</string>
+    <string name="begin">Begin</string>
+    <string name="end">End</string>
     <string-array name="names">
         <item>"Иван"</item>
         <item>"Мария"</item>
