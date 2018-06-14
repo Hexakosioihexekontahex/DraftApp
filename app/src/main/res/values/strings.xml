@@ -121,6 +121,7 @@
     <string name="end">End</string>
     <string name="result">Result</string>
     <string name="cancelled">Cancelled</string>
+    <string name="status">Status</string>
     <string-array name="names">
         <item>"Иван"</item>
         <item>"Мария"</item>
