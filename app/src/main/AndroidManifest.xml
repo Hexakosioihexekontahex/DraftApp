@@ -149,7 +149,8 @@
         <activity android:name=".numbered.L085" />
         <activity android:name=".numbered.L086" />
         <activity android:name=".numbered.L087" />
-        <activity android:name=".numbered.L088"></activity>
+        <activity android:name=".numbered.L088" />
+        <activity android:name=".numbered.L089"></activity>
     </application>
 
 </manifest>

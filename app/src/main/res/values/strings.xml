@@ -120,6 +120,7 @@
     <string name="begin">Begin</string>
     <string name="end">End</string>
     <string name="result">Result</string>
+    <string name="cancelled">Cancelled</string>
     <string-array name="names">
         <item>"Иван"</item>
         <item>"Мария"</item>
