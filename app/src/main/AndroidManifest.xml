@@ -152,7 +152,11 @@
         <activity android:name=".numbered.L088" />
         <activity android:name=".numbered.L089" />
         <activity android:name=".numbered.L090" />
-        <activity android:name=".numbered.L091"></activity>
+        <!--<activity android:name=".numbered.L091" />-->
+        <activity android:name=".numbered.L092" />
+
+        <service
+            android:name=".numbered.L092Service" />
     </application>
 
 </manifest>
