@@ -159,6 +159,14 @@
         <service android:name=".numbered.L093Service" />
 
         <activity android:name=".numbered.L093" />
+        <activity android:name=".numbered.L094" />
+
+        <service
+            android:name=".numbered.L094Service">
+            <intent-filter>
+                <action android:name="com.test.hex.draftapp.numbered.L094Service" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
