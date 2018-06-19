@@ -124,6 +124,12 @@
     <string name="status">Status</string>
     <string name="startService">Start service</string>
     <string name="stopService">Stop service</string>
+    <string name="task1">Task1</string>
+    <string name="task2">Task2</string>
+    <string name="task3">Task3</string>
+    <string name="task1start">Task1 start</string>
+    <string name="task2start">Task2 start</string>
+    <string name="task3start">Task3 start</string>
     <string-array name="names">
         <item>"Иван"</item>
         <item>"Мария"</item>
