@@ -19,12 +19,12 @@ private const val TASK_CODE_1 = 1
 private const val TASK_CODE_2 = 2
 private const val TASK_CODE_3 = 3
 
-const val STATUS_START = 100
-const val STATUS_FINISH = 200
+private const val STATUS_START = 100
+private const val STATUS_FINISH = 200
 
-const val PARAM_TIME = "time"
-const val PARAM_P_INTENT = "pendingIntent"
-const val PARAM_RESULT = "result"
+private const val PARAM_TIME = "time"
+private const val PARAM_P_INTENT = "pendingIntent"
+private const val PARAM_RESULT = "result"
 
 class L095 : AppCompatActivity() {
 
@@ -96,14 +96,10 @@ class L095 : AppCompatActivity() {
                         val result1 = "Task1 finish, result = $result"
                         tvText1.text = result1
                     }
-                }
-                when (requestCode) {
                     TASK_CODE_2 -> {
                         val result2 = "Task2 finish, result = $result"
                         tvText2.text = result2
                     }
-                }
-                when (requestCode) {
                     TASK_CODE_3 -> {
                         val result3 = "Task3 finish, result = $result"
                         tvText3.text = result3
