@@ -130,6 +130,9 @@
     <string name="task1start">Task1 start</string>
     <string name="task2start">Task2 start</string>
     <string name="task3start">Task3 start</string>
+    <string name="stop">Stop</string>
+    <string name="bind">Bind</string>
+    <string name="unbind">Unbind</string>
     <string-array name="names">
         <item>"Иван"</item>
         <item>"Мария"</item>

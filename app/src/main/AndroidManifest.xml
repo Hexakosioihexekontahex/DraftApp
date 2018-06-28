@@ -167,14 +167,20 @@
             </intent-filter>
         </service>
         <service android:name=".numbered.L095Service" />
-        <service android:name=".numbered.L096Service" >
+        <service android:name=".numbered.L096Service">
             <intent-filter>
                 <action android:name="com.test.hex.draftapp.l96.servicebackbroadcast" />
+            </intent-filter>
+        </service>
+        <service android:name=".numbered.L097Service">
+            <intent-filter>
+                <action android:name="com.test.hex.draftapp.l97.servicebinding" />
             </intent-filter>
         </service>
 
         <activity android:name=".numbered.L095" />
         <activity android:name=".numbered.L096" />
+        <activity android:name=".numbered.L097"></activity>
     </application>
 
 </manifest>
