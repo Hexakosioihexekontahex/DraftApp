@@ -133,6 +133,8 @@
     <string name="stop">Stop</string>
     <string name="bind">Bind</string>
     <string name="unbind">Unbind</string>
+    <string name="up">Up</string>
+    <string name="down">Down</string>
     <string-array name="names">
         <item>"Иван"</item>
         <item>"Мария"</item>

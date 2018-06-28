@@ -177,10 +177,12 @@
                 <action android:name="com.test.hex.draftapp.l97.servicebinding" />
             </intent-filter>
         </service>
+        <service android:name=".numbered.L098Service" />
 
         <activity android:name=".numbered.L095" />
         <activity android:name=".numbered.L096" />
-        <activity android:name=".numbered.L097"></activity>
+        <activity android:name=".numbered.L097" />
+        <activity android:name=".numbered.L098"></activity>
     </application>
 
 </manifest>
