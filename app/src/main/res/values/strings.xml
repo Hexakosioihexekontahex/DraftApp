@@ -135,6 +135,7 @@
     <string name="unbind">Unbind</string>
     <string name="up">Up</string>
     <string name="down">Down</string>
+    <string name="error">Error</string>
     <string-array name="names">
         <item>"Иван"</item>
         <item>"Мария"</item>

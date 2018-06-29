@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         val data: MutableList<String> = mutableListOf("004", "005", "6_layout", "6_linear", "6_table",
                 "7_gravity", "7_margin", "7_weight")
-        for (i in 8..100) {//TODO inc second
+        for (i in 8..101) {//TODO inc second
             data.add("${if(i<100) "0" else ""}${if(i<10) "0" else ""}$i")
         }
         data.apply {
@@ -430,6 +430,10 @@ class MainActivity : AppCompatActivity() {
             }
             "100" -> {
                 intention = Intent(this, L100::class.java)
+                startActivity(intention)
+            }
+            "101" -> {
+                intention = Intent(this, L101::class.java)
                 startActivity(intention)
             }
             //TODO add new one
