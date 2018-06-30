@@ -195,9 +195,12 @@
         <activity android:name=".numbered.L099" />
         <activity android:name=".numbered.L100" />
         <activity android:name=".numbered.L101" />
+
         <provider
             android:name=".numbered.L101ContentProvider"
-            android:authorities="com.test.hex.draftapp.AddressBook"/>
+            android:authorities="com.test.hex.draftapp.AddressBook" />
+
+        <activity android:name=".numbered.L102" />
     </application>
 
 </manifest>
