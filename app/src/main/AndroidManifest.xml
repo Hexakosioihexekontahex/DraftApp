@@ -201,6 +201,7 @@
             android:authorities="com.test.hex.draftapp.AddressBook" />
 
         <activity android:name=".numbered.L102" />
+        <activity android:name=".numbered.L103"></activity>
     </application>
 
 </manifest>
