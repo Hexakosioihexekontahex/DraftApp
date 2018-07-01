@@ -136,6 +136,7 @@
     <string name="up">Up</string>
     <string name="down">Down</string>
     <string name="error">Error</string>
+    <string name="first">First</string>
     <string-array name="names">
         <item>"Иван"</item>
         <item>"Мария"</item>
