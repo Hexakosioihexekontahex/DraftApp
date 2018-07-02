@@ -204,7 +204,11 @@
         <activity android:name=".numbered.L103" />
         <activity android:name=".numbered.L104" />
         <activity android:name=".numbered.L105" />
-        <activity android:name=".numbered.L106"></activity>
+        <activity android:name=".numbered.L106" />
+        <activity
+            android:name=".numbered.L108"
+            android:theme="@android:style/Theme.Holo.Light"
+            android:label="@string/action_bar_theme"/>
     </application>
 
 </manifest>

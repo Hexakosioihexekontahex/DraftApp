@@ -145,6 +145,7 @@
     <string name="access_to_fragment_1_from_activity">Access to Fragment 1 from Activity</string>
     <string name="access_to_fragment_2_from_activity">Access to Fragment 2 from Activity</string>
     <string name="access_from_fragment_1">Access from Fragment1</string>
+    <string name="action_bar_theme">ActionBarTheme</string>
     <string-array name="names">
         <item>"Иван"</item>
         <item>"Мария"</item>
