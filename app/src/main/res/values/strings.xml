@@ -137,6 +137,9 @@
     <string name="down">Down</string>
     <string name="error">Error</string>
     <string name="first">First</string>
+    <string name="remove">Remove</string>
+    <string name="replace">Replace</string>
+    <string name="add_to_back_stack">Add to Back Stack</string>
     <string-array name="names">
         <item>"Иван"</item>
         <item>"Мария"</item>
