@@ -140,6 +140,11 @@
     <string name="remove">Remove</string>
     <string name="replace">Replace</string>
     <string name="add_to_back_stack">Add to Back Stack</string>
+    <string name="log">Log</string>
+    <string name="find">Find</string>
+    <string name="access_to_fragment_1_from_activity">Access to Fragment 1 from Activity</string>
+    <string name="access_to_fragment_2_from_activity">Access to Fragment 2 from Activity</string>
+    <string name="access_from_fragment_1">Access from Fragment1</string>
     <string-array name="names">
         <item>"Иван"</item>
         <item>"Мария"</item>
