@@ -148,6 +148,10 @@
     <string name="action_bar_theme">ActionBarTheme</string>
     <string name="list">List</string>
     <string name="empty">Empty</string>
+    <string name="text_of_your_message">Text of your message</string>
+    <string name="maybe">Maybe</string>
+    <string name="dialog1">Dialog1</string>
+    <string name="dialog2">Dialog2</string>
     <string-array name="names">
         <item>"Иван"</item>
         <item>"Мария"</item>
