@@ -210,7 +210,8 @@
             android:label="@string/action_bar_theme"
             android:theme="@style/Theme.AppCompat.Light" />
         <activity android:name=".numbered.L109" />
-        <activity android:name=".numbered.L110"></activity>
+        <activity android:name=".numbered.L110" />
+        <activity android:name=".numbered.L111"></activity>
     </application>
 
 </manifest>
