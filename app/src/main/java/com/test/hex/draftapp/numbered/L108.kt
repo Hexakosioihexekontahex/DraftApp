@@ -26,13 +26,13 @@ class L108 : AppCompatActivity(), ActionBar.TabListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.l108)
 
-        actionBar.apply {
+        actionBar?.apply {
             navigationMode = ActionBar.NAVIGATION_MODE_TABS
-            addTab(actionBar.newTab().apply {
+            addTab(newTab().apply {
                 text = "tab1"
                 setTabListener(this@L108)
             })
-            addTab(actionBar.newTab().apply {
+            addTab(newTab().apply {
                 text = "tab2"
                 setTabListener(this@L108)
             })

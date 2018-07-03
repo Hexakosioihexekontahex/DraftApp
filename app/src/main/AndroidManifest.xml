@@ -207,8 +207,9 @@
         <activity android:name=".numbered.L106" />
         <activity
             android:name=".numbered.L108"
-            android:theme="@android:style/Theme.Holo.Light"
-            android:label="@string/action_bar_theme"/>
+            android:label="@string/action_bar_theme"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity android:name=".numbered.L109" />
     </application>
 
 </manifest>
