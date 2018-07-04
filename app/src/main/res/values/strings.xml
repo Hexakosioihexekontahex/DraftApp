@@ -176,6 +176,14 @@
     <string name="header2">Header 2</string>
     <string name="header3_summary">Summary of Header 3</string>
     <string name="header3">Header 3</string>
+    <string name="fragment1">Fragment 1</string>
+    <string name="fragment2">Fragment 2</string>
+    <string name="item_31">Item 31</string>
+    <string name="item_32">Item 32</string>
+    <string name="add_delete">Add/Delete</string>
+    <string name="show_hide">Show/Hide</string>
+    <string name="fragment">Fragment</string>
+    <string name="item_2">Item 2</string>
     <string-array name="names">
         <item>"Иван"</item>
         <item>"Мария"</item>

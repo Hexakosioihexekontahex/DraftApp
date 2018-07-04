@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".numbered.L112"
+    android:orientation="vertical">
+    <CheckBox
+        android:id="@+id/cbAddDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_delete"
+        android:checked="false"
+        android:onClick="onClick"/>
+    <CheckBox
+        android:id="@+id/cbShowHide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/show_hide"
+        android:checked="false"
+        android:onClick="onClick"/>
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment"
+        android:textAllCaps="false"
+        android:onClick="onClick"/>
+    <FrameLayout
+        android:id="@+id/flCont"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

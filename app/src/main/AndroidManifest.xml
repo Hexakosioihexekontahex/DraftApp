@@ -211,7 +211,8 @@
             android:theme="@style/Theme.AppCompat.Light" />
         <activity android:name=".numbered.L109" />
         <activity android:name=".numbered.L110" />
-        <activity android:name=".numbered.L111"></activity>
+        <activity android:name=".numbered.L111" />
+        <activity android:name=".numbered.L112"></activity>
     </application>
 
 </manifest>

@@ -3,6 +3,7 @@ package com.test.hex.draftapp.numbered
 import android.os.Bundle
 import android.preference.PreferenceActivity
 import android.preference.PreferenceFragment
+import android.widget.Toast
 import com.test.hex.draftapp.R
 
 class L111 : PreferenceActivity() {
@@ -11,6 +12,8 @@ class L111 : PreferenceActivity() {
     }
 
     override fun isValidFragment(fragmentName: String?): Boolean {
+        Toast.makeText(this, "isMultiPane: $isMultiPane", Toast.LENGTH_SHORT)
+                .show()
         return L111PreferenceFragment1::class.java.name == fragmentName ||
                 L111PreferenceFragment2::class.java.name == fragmentName
     }
