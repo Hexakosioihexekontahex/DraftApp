@@ -183,7 +183,11 @@
     <string name="add_delete">Add/Delete</string>
     <string name="show_hide">Show/Hide</string>
     <string name="fragment">Fragment</string>
+    <string name="action_mode">Action mode</string>
+    <string name="item_1">Item 1</string>
     <string name="item_2">Item 2</string>
+    <string name="item_3">Item 3</string>
+    <string name="item_4">Item 4</string>
     <string-array name="names">
         <item>"Иван"</item>
         <item>"Мария"</item>
