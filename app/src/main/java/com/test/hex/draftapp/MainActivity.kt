@@ -1,11 +1,16 @@
 package com.test.hex.draftapp
 
 import android.content.Intent
+import android.graphics.Color
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.*
+import android.support.design.widget.FloatingActionButton
+import android.support.design.widget.Snackbar
+import com.mikepenz.materialdrawer.DrawerBuilder
 import com.test.hex.draftapp.numbered.*
+import org.jetbrains.anko.find
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,6 +22,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.l000)
+
+        DrawerBuilder().apply {
+            withActivity(this@MainActivity)
+            withActionBarDrawerToggleAnimated(true)
+            withSliderBackgroundColor(Color.GRAY)
+        }.build()
 
         val data: MutableList<String> = mutableListOf("004", "005", "6_layout", "6_linear", "6_table",
                 "7_gravity", "7_margin", "7_weight")
@@ -38,9 +49,23 @@ class MainActivity : AppCompatActivity() {
         }
         data.reverse()
 
+        val coordinator = find<View>(R.id.content)
+
+        find<FloatingActionButton>(R.id.fabButton).apply {
+            setOnClickListener {
+                Snackbar.make(coordinator, "Press long to bring up the last lesson",
+                        Snackbar.LENGTH_SHORT).show()
+            }
+
+            setOnLongClickListener {
+                    clickGridElem(TextView(this@MainActivity).apply { text = data[0] })
+                true
+            }
+        }
+
         aAdapter = ArrayAdapter(this, R.layout.l000_item, R.id.tvText,
                 data.toTypedArray())
-        gvMain = findViewById(R.id.gvMain)
+        gvMain = find(R.id.gvMain)
         gvMain.adapter = aAdapter
         adjustGridView()
     }
