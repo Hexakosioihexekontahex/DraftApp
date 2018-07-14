@@ -13,7 +13,6 @@ import com.test.hex.draftapp.numbered.*
 import org.jetbrains.anko.find
 
 class MainActivity : AppCompatActivity() {
-
     lateinit var gvMain: GridView
     private lateinit var aAdapter: ArrayAdapter<String>
     lateinit var intention: Intent
@@ -31,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         val data: MutableList<String> = mutableListOf("004", "005", "6_layout", "6_linear", "6_table",
                 "7_gravity", "7_margin", "7_weight")
-        for (i in 8..116) {//TODO inc second
+        for (i in 8..117) {//TODO inc second
             data.add("${if(i<100) "0" else ""}${if(i<10) "0" else ""}$i")
         }
         data.apply {
@@ -45,6 +44,7 @@ class MainActivity : AppCompatActivity() {
             remove("047")
             remove("091")
             remove("107")//same as 014
+            remove("117")//widget
             //TODO if need skip something
         }
         data.reverse()
