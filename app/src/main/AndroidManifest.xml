@@ -5,6 +5,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
 
     <application
         android:allowBackup="true"
@@ -216,7 +217,15 @@
         <activity android:name=".numbered.L113" />
         <activity android:name=".numbered.L114" />
         <activity android:name=".numbered.L115" />
-        <activity android:name=".numbered.L115Details"></activity>
+        <activity android:name=".numbered.L115Details" />
+        <activity android:name=".numbered.L116A" />
+        <activity android:name=".numbered.L116B" />
+        <activity android:name=".numbered.L116C">
+            <intent-filter>
+                <action android:name="mngtasks1_activity_c"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".numbered.L116D" />
     </application>
 
 </manifest>
