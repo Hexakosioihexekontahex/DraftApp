@@ -190,6 +190,7 @@
     <string name="item_4">Item 4</string>
     <string name="info">Info</string>
     <string name="widget">Widget</string>
+    <string name="widget1">Widget1</string>
     <string-array name="names">
         <item>"Иван"</item>
         <item>"Мария"</item>

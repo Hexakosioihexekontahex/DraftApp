@@ -222,20 +222,29 @@
         <activity android:name=".numbered.L116B" />
         <activity android:name=".numbered.L116C">
             <intent-filter>
-                <action android:name="mngtasks1_activity_c"/>
+                <action android:name="mngtasks1_activity_c" />
             </intent-filter>
         </activity>
         <activity android:name=".numbered.L116D" />
 
-        <receiver android:name=".numbered.L117Widget"
+        <receiver
+            android:name=".numbered.L117Widget"
             android:icon="@android:drawable/star_big_on"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
-            <meta-data android:name="android.appwidget.provider"
-                android:resource="@xml/l117_widget_metadata"/>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/l117_widget_metadata" />
         </receiver>
+
+        <activity android:name=".numbered.L118WidgetConfig">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

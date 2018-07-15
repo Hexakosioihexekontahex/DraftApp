@@ -11,6 +11,6 @@
         android:gravity="center"
         android:textColor="#000"
         android:textSize="18sp"
-        android:text="@string/widget"/>
+        android:text="@string/widget1"/>
 
 </RelativeLayout>

@@ -3,4 +3,5 @@
     android:initialLayout="@layout/l117_widget"
     android:minHeight="40dp"
     android:minWidth="40dp"
-    android:updatePeriodMillis="2400000" />
+    android:updatePeriodMillis="2400000"
+    android:configure="com.test.hex.draftapp.numbered.L118WidgetConfig"/>
