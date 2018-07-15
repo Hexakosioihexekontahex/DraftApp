@@ -239,12 +239,14 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/l117_widget_metadata" />
         </receiver>
+        <receiver android:name=".numbered.L119Receiver" />
 
         <activity android:name=".numbered.L118WidgetConfig">
             <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
             </intent-filter>
         </activity>
+        <activity android:name=".numbered.L119"></activity>
     </application>
 
 </manifest>
