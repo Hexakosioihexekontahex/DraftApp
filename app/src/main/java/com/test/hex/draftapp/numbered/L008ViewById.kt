@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.CheckBox
 import android.widget.TextView
 import com.test.hex.draftapp.R
+import kotlinx.android.synthetic.main.l008_view_by_id.*
 
 class L008ViewById : AppCompatActivity() {
 
@@ -17,14 +18,11 @@ class L008ViewById : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.l008_view_by_id)
 
-        textView = findViewById(R.id.helloWorld)
-        textView.text = getString(R.string.easy_android)
+        helloWorld.text = getString(R.string.easy_android)
 
-        button = findViewById(R.id.mybtn)
-        button.text = getString(R.string.my_button)
-        button.isEnabled = false
+        mybtn.text = getString(R.string.my_button)
+        mybtn.isEnabled = false
 
-        checkBox = findViewById(R.id.checkBox)
         checkBox.isChecked = true
     }
 }

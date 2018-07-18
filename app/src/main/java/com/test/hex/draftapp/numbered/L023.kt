@@ -7,18 +7,17 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import com.test.hex.draftapp.R
+import kotlinx.android.synthetic.main.l023.*
 
 
 class L023 : AppCompatActivity(), View.OnClickListener {
 
     val TAG = "lifecycle"
-    lateinit var button: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.l023)
 
-        button = findViewById(R.id.button)
         button.setOnClickListener(this)
 
         Log.d(TAG, "L023 onCreate")

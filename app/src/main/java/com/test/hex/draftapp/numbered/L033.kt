@@ -7,26 +7,19 @@ import android.widget.EditText
 import android.widget.Button
 import android.widget.Toast
 import com.test.hex.draftapp.R
+import kotlinx.android.synthetic.main.l033.*
 
 private const val SAVED_TEXT = "saved_text"
 
 class L033 : AppCompatActivity() {
-
-    lateinit var etText: EditText
     lateinit var sPref: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.l033)
 
-        etText = findViewById(R.id.etText)
-
-        findViewById<Button>(R.id.btnSave).setOnClickListener {
-            saveText()
-        }
-        findViewById<Button>(R.id.btnLoad).setOnClickListener {
-            loadText()
-        }
+        btnSave.setOnClickListener { saveText() }
+        btnLoad.setOnClickListener { loadText() }
 
         loadText()
     }

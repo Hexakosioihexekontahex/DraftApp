@@ -6,37 +6,26 @@ import android.util.Log
 import android.view.Gravity
 import android.widget.*
 import com.test.hex.draftapp.R
+import kotlinx.android.synthetic.main.l010_click_buttons.*
 
 private const val TAG = "myLogs"
 
 class L010ClickButtons : AppCompatActivity() {
 
-    lateinit var textView: TextView
-    lateinit var button: Button
-    lateinit var button1: Button
-    lateinit var button2: Button
-    lateinit var button3: Button
-    lateinit var checkBox: CheckBox
-    lateinit var checkBox1: CheckBox
-    lateinit var checkBox2: CheckBox
-    lateinit var textView1: TextView
-    lateinit var textView2: TextView
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.l010_click_buttons)
 
-        textView = findViewById(R.id.textView)
         textView.text = getString(R.string.click_any_button)
 
-        Log.d(TAG, "Найдем три кнопки")
+//        Log.d(TAG, "Найдем три кнопки")
 
-        button1 = findViewById(R.id.button1)
-        Log.d(TAG, "Найдена кнопка 1")
-        button2 = findViewById(R.id.button2)
-        Log.d(TAG, "Найдена кнопка 2")
-        button3 = findViewById(R.id.button3)
-        Log.d(TAG, "Найдена кнопка 3")
+//        button1 = findViewById(R.id.button1)
+//        Log.d(TAG, "Найдена кнопка 1")
+//        button2 = findViewById(R.id.button2)
+//        Log.d(TAG, "Найдена кнопка 2")
+//        button3 = findViewById(R.id.button3)
+//        Log.d(TAG, "Найдена кнопка 3")
 
         button1.setOnClickListener {
             textView.text = getString(R.string.text1)

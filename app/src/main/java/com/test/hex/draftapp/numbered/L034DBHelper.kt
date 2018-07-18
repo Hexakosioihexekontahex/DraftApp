@@ -2,8 +2,7 @@ package com.test.hex.draftapp.numbered
 
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
-import android.database.sqlite.SQLiteOpenHelper
-//import org.jetbrains.exposed.sql.Table
+import org.jetbrains.anko.db.*
 
 const val DATABASE_VERSION = 1
 const val DATABASE_NAME = "contactDb"
@@ -13,21 +12,32 @@ const val KEY_ID = "_id"
 const val KEY_NAME = "name"
 const val KEY_MAIL = "mail"
 
-class L034DBHelper(context: Context?)
-    : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
+class L034DBHelper(context: Context)
+    : ManagedSQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
+    companion object {
+        private var instance: L034DBHelper? = null
 
-
-
-    override fun onCreate(db: SQLiteDatabase?) {
-        db?.execSQL(
-                "create table $TABLE_CONTACTS($KEY_ID integer primary key,$KEY_NAME text,$KEY_MAIL text)"
-        )
+        @Synchronized
+        fun instance(context: Context): L034DBHelper {
+            if (instance == null) {
+                instance = L034DBHelper(context.applicationContext)
+            }
+            return instance!!
+        }
     }
 
-    override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        db?.execSQL("drop table if exists $TABLE_CONTACTS")
+    val Context.database: L034DBHelper
+        get() = L034DBHelper.instance(applicationContext)
 
-        onCreate(db)
+    override fun onCreate(database: SQLiteDatabase?) {
+        database?.createTable(
+                TABLE_CONTACTS, true, KEY_ID to INTEGER + PRIMARY_KEY,
+                KEY_NAME to TEXT, KEY_MAIL to TEXT)
+    }
+
+    override fun onUpgrade(database: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
+        database?.dropTable(TABLE_CONTACTS, true)
+        onCreate(database)
     }
 
 }

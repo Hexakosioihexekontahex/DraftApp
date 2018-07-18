@@ -6,30 +6,26 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import com.test.hex.draftapp.R
+import kotlinx.android.synthetic.main.l027.*
 
 class L027 : AppCompatActivity(), View.OnClickListener {
 
-    lateinit var timeButton: Button
-    lateinit var dateButton: Button
     lateinit var intention: Intent
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.l027)
-
-        timeButton = findViewById(R.id.time)
-        dateButton = findViewById(R.id.date)
-        timeButton.setOnClickListener(this)
-        dateButton.setOnClickListener(this)
+        time.setOnClickListener(this)
+        date.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
         when (v?.id) {
-            R.id.time -> {
+            time.id -> {
                 intention = Intent("com.test.hex.intent.action.time2")
                 startActivity(intention)
             }
-            R.id.date -> {
+            date.id -> {
                 intention = Intent("com.test.hex.intent.action.date2")
                 startActivity(intention)
             }

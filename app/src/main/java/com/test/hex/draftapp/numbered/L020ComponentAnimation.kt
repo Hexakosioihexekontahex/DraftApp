@@ -1,15 +1,14 @@
 package com.test.hex.draftapp.numbered
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.view.ContextMenu
 import android.view.MenuItem
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import android.widget.TextView
 import com.test.hex.draftapp.R
-
+import kotlinx.android.synthetic.main.l020_component_animation.*
 
 private const val MENU_ALPHA_ID = 1
 private const val MENU_SCALE_ID = 2
@@ -19,20 +18,16 @@ private const val MENU_COMBO_ID = 5
 
 class L020ComponentAnimation : AppCompatActivity() {
 
-    lateinit var tv: TextView
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.l020_component_animation)
-
-        tv = findViewById(R.id.tv)
 
         registerForContextMenu(tv)
     }
 
     override fun onCreateContextMenu(menu: ContextMenu?, v: View?, menuInfo: ContextMenu.ContextMenuInfo?) {
         when (v?.id) {
-            R.id.tv -> {
+            tv.id -> {
                 menu?.add(0, MENU_ALPHA_ID, 0, "alpha")
                 menu?.add(0, MENU_SCALE_ID, 0, "scale")
                 menu?.add(0, MENU_TRANSLATE_ID, 0, "translate")

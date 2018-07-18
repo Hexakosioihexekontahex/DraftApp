@@ -6,8 +6,8 @@ import android.os.Bundle
 import android.view.ContextMenu
 import android.view.MenuItem
 import android.view.View
-import android.widget.TextView
 import com.test.hex.draftapp.R
+import kotlinx.android.synthetic.main.l015_context_menu.*
 
 private const val MENU_COLOUR_RED = 1
 private const val MENU_COLOUR_GREEN = 2
@@ -19,15 +19,9 @@ private const val MENU_SIZE_30 = 6
 
 class L015ContextMenu : AppCompatActivity() {
 
-    lateinit var textView1: TextView
-    lateinit var textView2: TextView
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.l015_context_menu)
-
-        textView1 = findViewById(R.id.textView1)
-        textView2 = findViewById(R.id.textView2)
 
         registerForContextMenu(textView1)
         registerForContextMenu(textView2)
@@ -37,12 +31,12 @@ class L015ContextMenu : AppCompatActivity() {
                                      v: View?,
                                      menuInfo: ContextMenu.ContextMenuInfo?) {
         when (v?.id) {
-            R.id.textView1 -> {
+            textView1.id -> {
                 menu?.add(0, MENU_COLOUR_RED, 0, "Red")
                 menu?.add(0, MENU_COLOUR_GREEN, 0, "Green")
                 menu?.add(0, MENU_COLOUR_BLUE, 0, "Blue")
             }
-            R.id.textView2 -> {
+            textView2.id -> {
                 menu?.add(0, MENU_SIZE_22, 0, "22")
                 menu?.add(0, MENU_SIZE_26, 0, "26")
                 menu?.add(0, MENU_SIZE_30, 0, "30")

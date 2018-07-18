@@ -3,31 +3,22 @@ package com.test.hex.draftapp.numbered
 import android.app.Activity
 import android.content.Intent
 import android.graphics.Color
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.view.Gravity
-import android.widget.Button
-import android.widget.TextView
 import android.widget.Toast
 import com.test.hex.draftapp.R
+import kotlinx.android.synthetic.main.l030.*
 
 const val REQUEST_CODE_COLOR = 1
 const val REQUEST_CODE_ALIGN = 2
 
 class L030 : AppCompatActivity() {
-
-    lateinit var buttonColor: Button
-    lateinit var buttonAlign: Button
-    lateinit var tvText: TextView
     lateinit var intention: Intent
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.l030)
-
-        tvText = findViewById(R.id.tvText)
-        buttonColor = findViewById(R.id.buttonColor)
-        buttonAlign = findViewById(R.id.buttonAlign)
 
         buttonColor.setOnClickListener {
             intention = Intent(this, L030Color::class.java)

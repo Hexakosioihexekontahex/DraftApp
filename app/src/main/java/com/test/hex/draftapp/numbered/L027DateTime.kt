@@ -4,12 +4,12 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import com.test.hex.draftapp.R
+import kotlinx.android.synthetic.main.l027_datetime.*
 import java.text.SimpleDateFormat
 import java.util.*
 
 class L027DateTime : AppCompatActivity() {
 
-    lateinit var tvDateTime: TextView
     lateinit var format: String
     lateinit var textInfo: String
 
@@ -28,7 +28,6 @@ class L027DateTime : AppCompatActivity() {
 
         val sdf = SimpleDateFormat(format, Locale.ENGLISH)
         val dateTime = "$textInfo ${sdf.format(Date(System.currentTimeMillis()))}"
-        tvDateTime = findViewById(R.id.tvDateTime)
         tvDateTime.text = dateTime
     }
 }
