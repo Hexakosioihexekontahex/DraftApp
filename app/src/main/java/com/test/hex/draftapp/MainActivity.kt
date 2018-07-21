@@ -9,6 +9,7 @@ import android.widget.*
 import android.support.design.widget.FloatingActionButton
 import android.support.design.widget.Snackbar
 import com.mikepenz.materialdrawer.DrawerBuilder
+import com.test.hex.draftapp.aggregate.operations.logAllAggregateOperations
 import com.test.hex.draftapp.numbered.*
 import org.jetbrains.anko.find
 
@@ -60,6 +61,7 @@ class MainActivity : AppCompatActivity() {
 
             setOnLongClickListener {
                     clickGridElem(TextView(this@MainActivity).apply { text = data[0] })
+                    logAllAggregateOperations()
                 true
             }
         }
