@@ -1,6 +1,7 @@
 package com.test.hex.draftapp.aggregate.operations
 
 import android.util.Log
+import com.test.hex.draftapp.doDefferedSum
 
 private const val AGG = "agg"
 
@@ -179,6 +180,7 @@ fun logAllAggregateOperations() {
     Log.d(AGG, "assertEquals(listOf(2, 5, 7, 3), listOf(3, 2, 7, 5).sortedByDescending { it % 3 }) : ${
         assertEquals(listOf(2, 5, 7, 3), listOf(3, 2, 7, 5).sortedByDescending { it % 3 })
     }")
+//    doDefferedSum() //1784293664
 }
 
 fun <T> assertEquals(list: List<T>, zip: List<T>): Boolean {
