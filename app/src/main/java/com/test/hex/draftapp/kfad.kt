@@ -1,5 +1,8 @@
 package com.test.hex.draftapp
 
+import android.app.Activity
+import android.content.Context
+import android.content.Intent
 import android.util.Log
 import kotlinx.coroutines.experimental.async
 import kotlinx.coroutines.experimental.runBlocking
@@ -76,4 +79,25 @@ fun doDefferedSum() {
         val sum = deffered .sumBy { it.await() }
         Log.d("kfad", "Sum: $sum") //1784293664
     }
+}
+
+/** return class.java by class */
+/*
+"029" -> {
+   intention = Intent(this, javaClass<L029>())
+   startActivity(intention)
+}
+*/
+
+//inline fun <reified T: Activity> javaClass() = T::class.java
+
+//inline fun <reified T: Activity> Context.startActivity() {
+//    val intent = Intent(this, javaClass<T>())
+//    startActivity(intent)
+//}
+
+inline fun <reified T: Activity> Context.startActivity(vararg params: Pair<String, String>) {
+    val intent = Intent(this, T::class.java)
+    params.forEach { intent.putExtra(it.first, it.second) }
+    startActivity(intent)
 }
