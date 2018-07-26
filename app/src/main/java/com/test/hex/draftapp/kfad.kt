@@ -101,3 +101,34 @@ inline fun <reified T: Activity> Context.startActivity(vararg params: Pair<Strin
     params.forEach { intent.putExtra(it.first, it.second) }
     startActivity(intent)
 }
+/** inline fun <T, R> T.let(f: (T) -> R): R = f(this) */
+/*  forecast?.let { dataMapper.convertDayToDomain(it) } */
+
+/** inline fun <T, R> with(receiver: T, f: T.() -> R): R = receiver.f() */
+/*  fun convertFromDomain(forecast: ForecastList) = with(forecast) {
+    val daily = dailyForecast.map { convertDayFromDomain(id, it) }
+    CityForecast(id, city, country, daily)
+    } */
+
+/** inline fun <T> T.apply(f: T.() -> Unit): T { f(); return this } */
+/*  val textView = TextView(context).apply {
+    text = "Hello"
+    hint = "Hint"
+    textColor = android.R.color.white
+    } */
+
+/*
+doAsync {
+    val result = RequestDayForecastCommand(intent.getLongExtra(ID, -1)).execute()
+    uiThread { bindForecast(result) }
+}
+*/
+//    |
+//    v
+/*
+async(UI) {
+    val result = bg { RequestDayForecastCommand(intent.getLongExtra(ID, -1))
+            .execute() }
+    bindForecast(result.await())
+}
+*/
