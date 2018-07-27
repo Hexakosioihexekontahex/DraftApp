@@ -191,6 +191,7 @@
     <string name="info">Info</string>
     <string name="widget">Widget</string>
     <string name="widget1">Widget1</string>
+    <string name="config">Config</string>
     <string-array name="names">
         <item>"Иван"</item>
         <item>"Мария"</item>
