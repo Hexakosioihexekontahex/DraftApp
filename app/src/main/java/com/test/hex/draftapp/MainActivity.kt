@@ -48,6 +48,9 @@ class MainActivity : AppCompatActivity() {
             remove("117")//widget
             remove("118")//widget
             remove("120")//widget
+            remove("121")//widget
+            remove("122")//widget
+            remove("123")//sign apk
             //TODO if need skip something
         }
         data.reverse()
