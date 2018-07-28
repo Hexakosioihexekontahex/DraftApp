@@ -247,19 +247,23 @@
             </intent-filter>
         </activity>
         <activity android:name=".numbered.L119" />
-        <activity android:name=".numbered.L120ConfigActivity" >
+        <activity android:name=".numbered.L120ConfigActivity">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
             </intent-filter>
         </activity>
+
         <receiver android:name=".numbered.L120AppWidgetProvider">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
+
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/l120_widget_metadata" />
         </receiver>
+
+        <activity android:name=".numbered.L125"></activity>
     </application>
 
 </manifest>

@@ -15,6 +15,7 @@ import android.widget.FrameLayout
 import android.widget.ListView
 import android.widget.TextView
 import com.test.hex.draftapp.R
+import android.content.res.Configuration
 
 class L115 : AppCompatActivity(), L115TitlesFragment.OnItemClickListener {
     var position = 0
@@ -86,7 +87,7 @@ class L115TitlesFragment : ListFragment() {
     }
 }
 
-fun newInstance(pos: Int) : L115DetailsFragment {
+private fun newInstance(pos: Int) : L115DetailsFragment {
     val detailsFragment = L115DetailsFragment()
     val args = Bundle()
     args.putInt("position", pos)
@@ -103,5 +104,25 @@ class L115DetailsFragment : Fragment() {
         v.findViewById<TextView>(R.id.tvText).text =
                 resources.getStringArray(R.array.content)[getPosition()]
         return v
+    }
+}
+
+class L115Details : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        if (resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            finish()
+            return
+        }
+
+        if (savedInstanceState == null) {
+            val details = newInstance(
+                    intent.getIntExtra("position", 0)
+            )
+            supportFragmentManager.beginTransaction()
+                    .add(android.R.id.content, details).commit()
+        }
     }
 }
