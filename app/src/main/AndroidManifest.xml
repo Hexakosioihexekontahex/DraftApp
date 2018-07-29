@@ -264,7 +264,8 @@
         </receiver>
 
         <activity android:name=".numbered.L125" />
-        <activity android:name=".numbered.L126"></activity>
+        <activity android:name=".numbered.L126" />
+        <activity android:name=".numbered.L127"></activity>
     </application>
 
 </manifest>

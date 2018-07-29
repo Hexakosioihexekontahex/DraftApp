@@ -202,6 +202,7 @@
     <string name="loop">Loop</string>
     <string name="backward">Backward</string>
     <string name="forward">Forward</string>
+    <string name="play">Play</string>
     <string-array name="names">
         <item>"Иван"</item>
         <item>"Мария"</item>
