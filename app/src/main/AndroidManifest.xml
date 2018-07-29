@@ -263,7 +263,8 @@
                 android:resource="@xml/l120_widget_metadata" />
         </receiver>
 
-        <activity android:name=".numbered.L125"></activity>
+        <activity android:name=".numbered.L125" />
+        <activity android:name=".numbered.L126"></activity>
     </application>
 
 </manifest>

@@ -192,6 +192,16 @@
     <string name="widget">Widget</string>
     <string name="widget1">Widget1</string>
     <string name="config">Config</string>
+    <string name="http">HTTP</string>
+    <string name="stream">Stream</string>
+    <string name="sd">SD</string>
+    <string name="uri">Uri</string>
+    <string name="raw">raw</string>
+    <string name="pause">Pause</string>
+    <string name="resume">Resume</string>
+    <string name="loop">Loop</string>
+    <string name="backward">Backward</string>
+    <string name="forward">Forward</string>
     <string-array name="names">
         <item>"Иван"</item>
         <item>"Мария"</item>
