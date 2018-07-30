@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 
         val data: MutableList<String> = mutableListOf("004", "005", "6_layout", "6_linear", "6_table",
                 "7_gravity", "7_margin", "7_weight")
-        for (i in 8..127) {//TODO inc second
+        for (i in 8..128) {//TODO inc second
             data.add("${if(i<100) "0" else ""}${if(i<10) "0" else ""}$i")
         }
         data.apply {
@@ -207,6 +207,7 @@ class MainActivity : AppCompatActivity() {
             "125" -> { startActivity<L125>() }
             "126" -> { startActivity<L126>() }
             "127" -> { startActivity<L127>() }
+            "128" -> { startActivity<L128>() }
             //TODO add new one
             else -> Toast.makeText(this,
                     "Select exist activity name",
