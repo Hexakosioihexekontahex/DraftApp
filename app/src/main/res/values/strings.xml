@@ -207,6 +207,7 @@
     <string name="sound_gain">Sound G</string>
     <string name="sound_gain_transient">Sound GT</string>
     <string name="sound_gain_transient_duck">Sound GTD</string>
+    <string name="record">Record</string>
     <string-array name="names">
         <item>"Иван"</item>
         <item>"Мария"</item>

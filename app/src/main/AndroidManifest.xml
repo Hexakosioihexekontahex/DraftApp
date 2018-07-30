@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
 
     <application
         android:allowBackup="true"
@@ -266,7 +267,8 @@
         <activity android:name=".numbered.L125" />
         <activity android:name=".numbered.L126" />
         <activity android:name=".numbered.L127" />
-        <activity android:name=".numbered.L128"></activity>
+        <activity android:name=".numbered.L128" />
+        <activity android:name=".numbered.L129"></activity>
     </application>
 
 </manifest>
