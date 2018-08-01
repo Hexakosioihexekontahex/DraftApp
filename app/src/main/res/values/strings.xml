@@ -212,6 +212,8 @@
     <string name="stop_record">Stop record</string>
     <string name="start_read_record">Start read record</string>
     <string name="stop_read_record">Stop read record</string>
+    <string name="photo">Photo</string>
+    <string name="video">Video</string>
     <string-array name="names">
         <item>"Иван"</item>
         <item>"Мария"</item>

@@ -269,7 +269,8 @@
         <activity android:name=".numbered.L127" />
         <activity android:name=".numbered.L128" />
         <activity android:name=".numbered.L129" />
-        <activity android:name=".numbered.L130"></activity>
+        <activity android:name=".numbered.L130" />
+        <activity android:name=".numbered.L131"></activity>
     </application>
 
 </manifest>
