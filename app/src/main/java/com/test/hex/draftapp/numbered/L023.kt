@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.l023.*
 
 class L023 : AppCompatActivity(), View.OnClickListener {
 
-    val TAG = "lifecycle"
+    val TAG = "Lifecycle"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -208,6 +208,10 @@
     <string name="sound_gain_transient">Sound GT</string>
     <string name="sound_gain_transient_duck">Sound GTD</string>
     <string name="record">Record</string>
+    <string name="start_record">Start record</string>
+    <string name="stop_record">Stop record</string>
+    <string name="start_read_record">Start read record</string>
+    <string name="stop_read_record">Stop read record</string>
     <string-array name="names">
         <item>"Иван"</item>
         <item>"Мария"</item>
